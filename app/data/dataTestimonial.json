@@ -1,0 +1,186 @@
+[
+    {
+      "id": 1,
+      "image": "/reviews/avatar1.webp",
+      "name": "Alexander Ball",
+      "company": "CEO Digital Avitex",
+      "date": "2 days ago",
+      "review": "Bytewave exceeded our expectations with their cloud computing solutions. Highly recommended!",
+      "listReply": [
+        {
+          "replyId": 5,
+          "rate": 4
+        },
+        {
+          "replyId": 3,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 2,
+      "image": "/reviews/avatar2.webp",
+      "name": "Izabel Watt",
+      "company": "UI UX Design TechX",
+      "date": "2 days ago",
+      "review": "As our CTO, Sarah is the visionary leader responsible for shaping our technology strategy.",
+      "listReply": [],
+      "rate": 5
+    },
+    {
+      "id": 3,
+      "image": "/reviews/avatar3.webp",
+      "name": "Tony Adams",
+      "company": "Service Dev HiveLab",
+      "date": "2 days ago",
+      "review": "At the forefront of our software development projects is Michael. His coding prowess and problem.",
+      "listReply": [
+        {
+          "replyId": 8,
+          "rate": 5
+        }
+      ],
+      "rate": 4
+    },
+    {
+      "id": 4,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "David is the friendly face behind our exceptional customer service. With a warm and approachable.",
+      "listReply": [
+        {
+          "replyId": 6,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 5,
+      "image": "/reviews/avatar2.webp",
+      "name": "Izabel Watt",
+      "company": "UI UX Design TechX",
+      "date": "2 days ago",
+      "review": "As our lead designer, she combines aesthetics with functionality to craft visually captivating solutions.",
+      "listReply": [
+        {
+          "replyId": 2,
+          "rate": 5
+        },
+        {
+          "replyId": 9,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 6,
+      "image": "/reviews/avatar3.webp",
+      "name": "Tony Adams",
+      "company": "Service Dev HiveLab",
+      "date": "2 days ago",
+      "review": "Their mastery of market analysis and tailored solutions drove our growth and competive advantage.",
+      "listReply": [],
+      "rate": 4
+    },
+    {
+      "id": 7,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "These consultants are true partners in success. Their thorough understanding of our industry coupled.",
+      "listReply": [
+        {
+          "replyId": 4,
+          "rate": 5
+        },
+        {
+          "replyId": 1,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 8,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "Nathan is our data guru. His analytical mindset and ability to extract valuable insights from friendly data.",
+      "listReply": [
+        {
+          "replyId": 2,
+          "rate": 5
+        },
+        {
+          "replyId": 10,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 9,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "Their team's expertise and commitment to excellence are unmatched. They delivered our project ahead.",
+      "listReply": [
+        {
+          "replyId": 5,
+          "rate": 5
+        },
+        {
+          "replyId": 3,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 10,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "From the initial consultation to project completion, demonstrated exceptional professionalism to detail.",
+      "listReply": [],
+      "rate": 5
+    },
+    {
+      "id": 11,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "I can't express how satisfied I am with the services provided by ByteWare. They not only delivered a website.",
+      "listReply": [
+        {
+          "replyId": 4,
+          "rate": 5
+        },
+        {
+          "replyId": 7,
+          "rate": 5
+        }
+      ],
+      "rate": 5
+    },
+    {
+      "id": 12,
+      "image": "/reviews/avatar1.webp",
+      "name": "Malika Kenny",
+      "company": "UI Dev TechOne",
+      "date": "2 days ago",
+      "review": "Bytewave consistently goes above and beyond. They have a knack for turning complex concepts into solutions.",
+      "listReply": [],
+      "rate": 5
+    }
+  ]

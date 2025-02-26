@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "/servicesSection/service1.webp",
+        "location": "Comercial cleaning Marrickville",
+        "header": "Comercial cleaning services in Marrickville",
+        "date": "January 22, 2025",
+        "description": "Located just 7 km southwest of Sydney’s CBD, Marrickville has transformed from an industrial area into a bustling hub for businesses, cafes, retail stores, and creative spaces. Known for its diverse culture and thriving hospitality scene, the area attracts both locals and visitors, increasing the demand for professional cleaning services."
+    },
+    {
+        "id": 2,
+        "image": "/servicesSection/service2.webp",
+        "location": "Commercial cleaning Liverpool",
+        "header": "Comercial cleaning services in Liverpool",
+        "date": "January 22, 2025",
+        "description": "Located in the southwestern part of Sydney, Liverpool is a rapidly growing commercial hub. The area boasts a diverse range of businesses, from retail outlets to corporate offices. Given its expansion, the demand for professional cleaning services has risen significantly to maintain the high standards of cleanliness expected by businesses and their customers."
+    },
+    {
+        "id": 3,
+        "image": "/servicesSection/service3.webp",
+        "location": "Commercial cleaning Newtown",
+        "header": "Comercial cleaning services in Newtown",
+        "date": "January 22, 2025",
+        "description": "Newtown is a vibrant and eclectic suburb located just a few kilometers from Sydney’s CBD. It is known for its lively arts scene, street murals, music venues, and unique local businesses. With a mix of heritage buildings, trendy cafes, and boutique shops, maintaining clean and inviting spaces is essential for business owners. The increasing foot traffic in the area makes commercial cleaning services a vital necessity."
+    }
+]

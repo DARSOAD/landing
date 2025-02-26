@@ -7,28 +7,34 @@ interface TestimonialData {
     name: string;
     company: string;
     image: string;
-  }
+    date: string;
+}
 
 interface TestimonialItemProps {
     data: TestimonialData;
     type: string;
-  }
+}
 
 const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
     return (
         <>
             {type === 'style-two' && (
-                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white rounded-2xl flex items-center gap-5 h-full">
-                    <div className="bg-img sm:w-[120px] w-20 sm:h-[120px] h-20 rounded-full overflow-hidden flex-shrink-0">
-                        <Image width={4000} height={4000} className="w-full h-full object-cover block" src={data.image} alt={data.image} />
-                    </div>
-                    <div className="content">
-                        <Rate currentRate={data.rate} style={'text-yellow text-xl'} />
-                        <p className="desc body2 mt-3">{data.review}</p>
-                        <div className="infor flex flex-col mt-3">
-                            <strong className="text-title">{data.name}</strong>
-                            <span className="caption1 text-surface1">{data.company}</span>
+                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white rounded-2xl flex flex-col items-start gap-5 h-full">
+                    <div className="flex flex-row space-x-2">
+                        <div className="bg-img lg:w-[40px] w-12 lg:h-[40px] h-12 rounded-full overflow-hidden flex-shrink-0">
+                            <Image width={4000} height={4000} className="w-full h-full object-cover block" src={data.image} alt={data.image} unoptimized />
                         </div>
+                        <div className="infor flex flex-col">
+                            <strong className="text-title text-gray-700">{data.name}</strong>
+                            <span className="caption1 text-surface1 text-gray-700">{data.company}</span>
+                        </div>
+                    </div>                    
+                    <div className="content">
+                        <div className="flex flex-row space-x-2">
+                            <Rate currentRate={data.rate} style={'text-yellow text-xl'} />
+                            <span className="caption1 text-surface1 text-gray-700">{data.date}</span>
+                        </div>
+                        <p className="desc body2 mt-3 text-gray-700">{data.review}</p>                        
                     </div>
                 </div>
             )}
@@ -53,7 +59,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
             )}
             {type === 'style-seven' && (
                 <div className="item p-10 bg-white rounded-[20px] h-full">
-                    <Rate currentRate={data.rate} style={'text-yellow text-xl'} />
+                    <Rate currentRate={data.rate} style={'!text-yellow text-xl'} />
                     <div className="desc body2 mt-3">{data.review}</div>
                     <div className="user flex items-center gap-3 mt-6">
                         <div className="bg-img w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
@@ -69,7 +75,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
             {type === 'style-main' && (
                 <div className="item flex flex-col justify-between md:p-10 p-7 bg-white rounded-[20px] border border-outline h-full">
                     <div className="review">
-                        <Rate currentRate={data.rate} style={'text-yellow text-xl'} />
+                        <Rate currentRate={data.rate} style={'!text-yellow text-xl'} />
                         <div className="body2 mt-3">{data.review}</div>
                     </div>
                     <div className="user flex items-center gap-3 mt-6">

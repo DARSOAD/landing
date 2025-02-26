@@ -4,32 +4,31 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
-import TestimonialItem from "@/app/components/testimonial/Testimonial";
+import ServiceItem from "@/app/components/service/Serviceitem";
 import { IoIosArrowForward } from "react-icons/io";
 
-interface TestimonialItemData {
-    rate: number;
-    review: string;
-    name: string;
-    company: string;
+interface ServiceItemData {
     image: string;
+    location: string;
+    header: string;
     date: string;
+    description: string;    
 }
 
-interface TestimonialTwoProps {
-    data: TestimonialItemData[];
+interface ServiceProps {
+    data: ServiceItemData[];
     classname?: string;  // classname puede ser opcional
 }
 
-export default function TestimonialTwo({ data, classname }: TestimonialTwoProps) {
+export default function Services({ data, classname }: ServiceProps) {
     return (
-        <section className={`testimonial-block lg:py-20 sm:py-14 py-10 bg-[#f0f0f0] ${classname}`}>
-            <div className="container flex flex-col lg:flex-row">
-                <div className="heading lg:w-1/5 lg:flex lg:flex-row lg:px-8 lg:pt-40">
-                    <h3 className="font-sans text-center text-gray-800 lg:!text-2xl">Our clients <br/> talk for us</h3>
-                    <IoIosArrowForward className="pl-2 w-5 h-5 text-gray-800 hidden lg:block lg:h-20" />
+        <section className={`testimonial-block sm:py-14 py-10 bg-[#f0f0f0] ${classname}`}>
+            <div className="flex flex-col w-full">
+                <div className="heading lg:px-8 lg:py-8">
+                    <h3 className="font-sans text-center text-gray-800 lg:!text-2xl">Comercial cleaning services</h3>
+                    <p className="font-sans text-center text-gray-600 lg:!text-2xl">Sydney-Wide Cleaning Services - Every space, perfectly cleaned</p>
                 </div>
-                <div className="list-testimonials md:mt-10 mt-7 w-full lg:w-4/5">
+                <div className="list-testimonials md:mt-10 mt-7 w-full">
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={1}
@@ -42,15 +41,15 @@ export default function TestimonialTwo({ data, classname }: TestimonialTwoProps)
                                 spaceBetween: 20,
                             },
                             1024: {
-                                slidesPerView: 2,
-                                spaceBetween: 30,
+                                slidesPerView: 3,
+                                spaceBetween: 20,
                             },
                         }}
                         className='h-full relative style-section'
                     >
                         {data.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <TestimonialItem data={item} type={'style-two'} />
+                                <ServiceItem data={item} type={'style-two'} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
