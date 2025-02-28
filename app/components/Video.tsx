@@ -14,7 +14,11 @@ export default function Video() {
     return (
         <section
             id="video"
-            className="relative text-center h-auto flex justify-between items-center w-full lg:px-28 lg:overflow-hidden"
+            className="
+                relative text-center 
+                h-auto flex justify-between 
+                items-center w-full lg:px-28 
+                lg:overflow-hidden py-20"
         >
             {/* Video de fondo */}
             <video

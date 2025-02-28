@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaStar } from "react-icons/fa6";
+import { IoMdStar } from "react-icons/io";
 
 type RateProps = {
     currentRate: number;
@@ -11,9 +11,9 @@ export default function Rate({ currentRate, style }: RateProps) {
 
     for (let i = 0; i < 5; i++) {
         if (i < currentRate) {
-            arrOfStar.push(<FaStar key={i} className={`${style} text-yellow-400`} />);
+            arrOfStar.push(<IoMdStar key={i} className={`${style} text-yellow-400`} />);
         } else {
-            arrOfStar.push(<FaStar key={i} className={`${style} text-gray-300`} />);
+            arrOfStar.push(<IoMdStar key={i} className={`${style} text-gray-300`} />);
         }
     }
 

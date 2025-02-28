@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Rate from "../testimonial/Rate";
+import { FcGoogle } from "react-icons/fc";
+import { AiOutlineLike } from "react-icons/ai";
+import { IoShareSocial } from "react-icons/io5";
+import { useState, useEffect } from "react";
 
 interface TestimonialData {
     rate: number;
     review: string;
     name: string;
-    company: string;
+    opinions: string;
     image: string;
     date: string;
 }
@@ -16,27 +20,47 @@ interface TestimonialItemProps {
 }
 
 const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
+
+    const [bgColor, setbgColor] = useState("");
+
+    useEffect(() => {
+        setbgColor(Math.floor(Math.random() * 16777215).toString(16));
+      }, []);
+
     return (
         <>
             {type === 'style-two' && (
-                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white rounded-2xl flex flex-col items-start gap-5 h-full">
+                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white rounded-2xl flex flex-col items-start gap-5 h-full font-[Arial] shadow-lg">
                     <div className="flex flex-row space-x-2">
-                        <div className="bg-img lg:w-[40px] w-12 lg:h-[40px] h-12 rounded-full overflow-hidden flex-shrink-0">
+                        <div className="bg-img lg:w-[40px] w-10 lg:h-[40px] h-10 rounded-full overflow-hidden flex-shrink-0"
+                            style={{ backgroundColor: `#${bgColor}` }}
+                        >
                             <Image width={4000} height={4000} className="w-full h-full object-cover block" src={data.image} alt={data.image} unoptimized />
                         </div>
-                        <div className="infor flex flex-col">
-                            <strong className="text-title text-gray-700">{data.name}</strong>
-                            <span className="caption1 text-surface1 text-gray-700">{data.company}</span>
+                        <div className="content font-[Arial]">
+                        <div className="flex flex-col">
+                            <div className="flex flex-row justify-between">
+                                <div className="flex flex-col">
+                                    <strong className="text-title text-gray-700 font-[Arial]">{data.name}</strong>
+                                    <span className="text-gray-400 font-[Arial] text-xs">{data.opinions}</span>
+                                </div>
+                                <FcGoogle />
+                            </div>
+                            
+                            <div className="flex flex-row">
+                                <Rate currentRate={data.rate} style={'text-yellow text-sm'} />
+                                <span className=" text-gray-400 font-[Arial] text-xs pl-2">{data.date}</span>
+                            </div>
                         </div>
-                    </div>                    
-                    <div className="content">
-                        <div className="flex flex-row space-x-2">
-                            <Rate currentRate={data.rate} style={'text-yellow text-xl'} />
-                            <span className="caption1 text-surface1 text-gray-700">{data.date}</span>
+                        <p className="desc body2 mt-3 text-gray-700 font-[Arial] leading-[1.2]">{data.review}</p>
+                        <div className="flex flex-row space-x-2 text-gray-400 mt-5">
+                            <AiOutlineLike />
+                            <IoShareSocial />
                         </div>
-                        <p className="desc body2 mt-3 text-gray-700">{data.review}</p>                        
                     </div>
+                    </div>                   
                 </div>
+
             )}
             {type === 'style-six' && (
                 <div className="item px-8 py-10 bg-white rounded-2xl flex max-lg:flex-col lg:items-center gap-5 h-full shadow-lg">
@@ -48,7 +72,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
                         <p className="desc body2 mt-3">{data.review}</p>
                         <div className="infor flex flex-col mt-3">
                             <strong className="text-title">{data.name}</strong>
-                            <span className="caption1 text-surface1">{data.company}</span>
+                            <span className="caption1 text-surface1">{data.opinions}</span>
                         </div>
                         <strong className="heading3 flex items-center absolute right-0 bottom-0">
                             <span className="icon-slash-bora"></span>
@@ -67,7 +91,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
                         </div>
                         <div className="infor">
                             <div className="text-title">{data.name}</div>
-                            <div className="caption1 text-surface1">{data.company}</div>
+                            <div className="caption1 text-surface1">{data.opinions}</div>
                         </div>
                     </div>
                 </div>
@@ -84,7 +108,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
                         </div>
                         <div className="infor">
                             <div className="text-title">{data.name}</div>
-                            <div className="caption1 text-surface1">{data.company}</div>
+                            <div className="caption1 text-surface1">{data.opinions}</div>
                         </div>
                     </div>
                 </div>

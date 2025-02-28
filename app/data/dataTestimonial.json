@@ -1,186 +1,186 @@
 [
-    {
-      "id": 1,
-      "image": "/reviews/avatar1.webp",
-      "name": "Alexander Ball",
-      "company": "CEO Digital Avitex",
-      "date": "2 days ago",
-      "review": "Bytewave exceeded our expectations with their cloud computing solutions. Highly recommended!",
-      "listReply": [
-        {
-          "replyId": 5,
-          "rate": 4
-        },
-        {
-          "replyId": 3,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 2,
-      "image": "/reviews/avatar2.webp",
-      "name": "Izabel Watt",
-      "company": "UI UX Design TechX",
-      "date": "2 days ago",
-      "review": "As our CTO, Sarah is the visionary leader responsible for shaping our technology strategy.",
-      "listReply": [],
-      "rate": 5
-    },
-    {
-      "id": 3,
-      "image": "/reviews/avatar3.webp",
-      "name": "Tony Adams",
-      "company": "Service Dev HiveLab",
-      "date": "2 days ago",
-      "review": "At the forefront of our software development projects is Michael. His coding prowess and problem.",
-      "listReply": [
-        {
-          "replyId": 8,
-          "rate": 5
-        }
-      ],
-      "rate": 4
-    },
-    {
-      "id": 4,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "David is the friendly face behind our exceptional customer service. With a warm and approachable.",
-      "listReply": [
-        {
-          "replyId": 6,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 5,
-      "image": "/reviews/avatar2.webp",
-      "name": "Izabel Watt",
-      "company": "UI UX Design TechX",
-      "date": "2 days ago",
-      "review": "As our lead designer, she combines aesthetics with functionality to craft visually captivating solutions.",
-      "listReply": [
-        {
-          "replyId": 2,
-          "rate": 5
-        },
-        {
-          "replyId": 9,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 6,
-      "image": "/reviews/avatar3.webp",
-      "name": "Tony Adams",
-      "company": "Service Dev HiveLab",
-      "date": "2 days ago",
-      "review": "Their mastery of market analysis and tailored solutions drove our growth and competive advantage.",
-      "listReply": [],
-      "rate": 4
-    },
-    {
-      "id": 7,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "These consultants are true partners in success. Their thorough understanding of our industry coupled.",
-      "listReply": [
-        {
-          "replyId": 4,
-          "rate": 5
-        },
-        {
-          "replyId": 1,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 8,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "Nathan is our data guru. His analytical mindset and ability to extract valuable insights from friendly data.",
-      "listReply": [
-        {
-          "replyId": 2,
-          "rate": 5
-        },
-        {
-          "replyId": 10,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 9,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "Their team's expertise and commitment to excellence are unmatched. They delivered our project ahead.",
-      "listReply": [
-        {
-          "replyId": 5,
-          "rate": 5
-        },
-        {
-          "replyId": 3,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 10,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "From the initial consultation to project completion, demonstrated exceptional professionalism to detail.",
-      "listReply": [],
-      "rate": 5
-    },
-    {
-      "id": 11,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "I can't express how satisfied I am with the services provided by ByteWare. They not only delivered a website.",
-      "listReply": [
-        {
-          "replyId": 4,
-          "rate": 5
-        },
-        {
-          "replyId": 7,
-          "rate": 5
-        }
-      ],
-      "rate": 5
-    },
-    {
-      "id": 12,
-      "image": "/reviews/avatar1.webp",
-      "name": "Malika Kenny",
-      "company": "UI Dev TechOne",
-      "date": "2 days ago",
-      "review": "Bytewave consistently goes above and beyond. They have a knack for turning complex concepts into solutions.",
-      "listReply": [],
-      "rate": 5
-    }
-  ]
+  {
+    "id": 1,
+    "image": "/reviews/A.png",
+    "name": "Alexander Johnson",
+    "opinions": "2 opinions",
+    "date": "3 weeks ago",
+    "review": "Oasis has transformed our office! Their professional cleaning service keeps our workspace spotless and fresh every day. Highly recommended!",
+    "listReply": [
+      {
+        "replyId": 5,
+        "rate": 5
+      },
+      {
+        "replyId": 3,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 2,
+    "image": "/reviews/I.png",
+    "name": "Isla Thompson",
+    "opinions": "5 opinions",
+    "date": "4 months ago",
+    "review": "We rely on Oasis for dusting, vacuuming, and disinfecting our office. Their team is thorough and efficient, ensuring a clean and healthy environment for our employees.",
+    "listReply": [],
+    "rate": 5
+  },
+  {
+    "id": 3,
+    "image": "/reviews/T.png",
+    "name": "Thomas White",
+    "opinions": "4 opinions",
+    "date": "2 days ago",
+    "review": "Oasis does an outstanding job maintaining our restrooms and kitchen. Everything is always sanitized and smells great!",
+    "listReply": [
+      {
+        "replyId": 8,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 4,
+    "image": "/reviews/M.png",
+    "name": "Matilda King",
+    "opinions": "1 opinion",
+    "date": "1 week ago",
+    "review": "Thanks to Oasis, our office always looks and feels fresh. Their attention to detail, especially in trash removal and recycling, makes a huge difference!",
+    "listReply": [
+      {
+        "replyId": 6,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 5,
+    "image": "/reviews/I.png",
+    "name": "Isaac Roberts",
+    "opinions": "1 opinion",
+    "date": "3 months ago",
+    "review": "Oasis takes hygiene seriously! Their deep cleaning services have improved our workplace, making it safer and more comfortable for everyone.",
+    "listReply": [
+      {
+        "replyId": 2,
+        "rate": 5
+      },
+      {
+        "replyId": 9,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 6,
+    "image": "/reviews/T.png",
+    "name": "Tyler Harris",
+    "opinions": "3 opinions",
+    "date": "5 days ago",
+    "review": "The team at Oasis is fantastic! They ensure that high-touch areas are disinfected regularly, which is essential for our busy office.",
+    "listReply": [],
+    "rate": 5
+  },
+  {
+    "id": 7,
+    "image": "/reviews/M.png",
+    "name": "Madeline Cooper",
+    "opinions": "7 opinions",
+    "date": "2 months ago",
+    "review": "Professional, reliable, and detail-oriented. Oasis has been our trusted cleaning partner for over a year, and we couldn't be happier!",
+    "listReply": [
+      {
+        "replyId": 4,
+        "rate": 5
+      },
+      {
+        "replyId": 1,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 8,
+    "image": "/reviews/L.png",
+    "name": "Liam Edwards",
+    "opinions": "11 opinions",
+    "date": "6 days ago",
+    "review": "Their restroom and kitchen cleaning services are top-notch! Our employees appreciate the fresh and sanitized space every day.",
+    "listReply": [
+      {
+        "replyId": 2,
+        "rate": 5
+      },
+      {
+        "replyId": 10,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 9,
+    "image": "/reviews/O.png",
+    "name": "Olivia Martin",
+    "opinions": "3 opinions",
+    "date": "1 month ago",
+    "review": "Oasis provides exceptional cleaning services. Their commitment to sustainability through waste management and recycling is a great plus!",
+    "listReply": [
+      {
+        "replyId": 5,
+        "rate": 5
+      },
+      {
+        "replyId": 3,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 10,
+    "image": "/reviews/E.png",
+    "name": "Ethan Williams",
+    "opinions": "12 opinions",
+    "date": "4 weeks ago",
+    "review": "The Oasis team is friendly, punctual, and thorough. They have made a real difference in keeping our workspace clean and welcoming.",
+    "listReply": [],
+    "rate": 5
+  },
+  {
+    "id": 11,
+    "image": "/reviews/S.png",
+    "name": "Sophie Anderson",
+    "opinions": "9 opinions",
+    "date": "2 days ago",
+    "review": "We've tried other cleaning services before, but Oasis stands out! They are always on time, professional, and do an outstanding job.",
+    "listReply": [
+      {
+        "replyId": 4,
+        "rate": 5
+      },
+      {
+        "replyId": 7,
+        "rate": 5
+      }
+    ],
+    "rate": 5
+  },
+  {
+    "id": 12,
+    "image": "/reviews/C.png",
+    "name": "Charlotte Taylor",
+    "opinions": "14 opinions",
+    "date": "2 weeks ago",
+    "review": "Oasis has been an essential part of our office maintenance. Their dedication to cleanliness and hygiene is truly commendable.",
+    "listReply": [],
+    "rate": 5
+  }
+]

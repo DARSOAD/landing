@@ -1,38 +1,40 @@
 'use client';
 import gsap from 'gsap';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../css/styles.css'
+import { IoMdCheckmark } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
-const services = [
-    {
-        title: "Office cleaning sydney",
-        description: "A clean office isn’t just about appearances...",
-        image: "/services/service1.webp",
-    },
-    {
-        title: "Dusting, Vacuuming & Surface Sanitization",
-        description: "Ensure a clean workspace with thorough dusting and vacuuming.",
-        image: "/services/service2.webp",
-    },
-    {
-        title: "Restroom & Kitchen Cleaning",
-        description: "Sanitize kitchens and restrooms for a hygienic environment.",
-        image: "/services/service3.webp",
-    },
-    {
-        title: "Trash Removal & Recycling",
-        description: "Keep your office clean with regular trash disposal and recycling.",
-        image: "/services/service4.webp",
-    },
-    {
-        title: "Disinfection of High-Touch Areas",
-        description: "Regular sanitization of handles, switches, and shared spaces.",
-        image: "/services/service5.webp",
-    },
-];
+interface ServiceItemData {
+    title: string;
+    description: string;
+    image: string;
+    includes: Record<string, string | undefined>;
+}
 
-function Portfolio() {
+interface ServiceProps {
+    data: ServiceItemData[];
+}
+
+
+
+function Portfolio({ data }: ServiceProps) {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 1024); // 📌 Cambia el estado si la pantalla es menor a 1024px
+        };
+
+        checkScreenSize(); // Llamamos una vez para establecer el estado inicial
+        window.addEventListener("resize", checkScreenSize);
+
+        return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
+
+
     function Playing() {
         gsap.registerPlugin(ScrollTrigger);
 
@@ -77,34 +79,53 @@ function Portfolio() {
         };
     }, []);
     return (
-        <section className="work-card section-padding pb-0 bg-[#e6e6e6]">
+        <section className="work-card section-padding pb-0 bg-[#f9f9fa]">
             <div className="container">
                 <div className="cards">
                     {
-                        services.map((service, index) => {
-                            return (<div key={index} className="card-item sub-bg ">
+                        data.map((service, index) => {
+                            return (<div key={index} className="card-item sub-bg lg:h-screen">
                                 <div className="row lg:flex lg:flex-row lg:justify-between">
                                     <div className="col-lg-5">
                                         <div className="cont flex lg:hidden">
                                             <div>
-                                                <h4 className='text-black font-sans font-bold lg:hidden'>{service.title}</h4>
+                                                <h4 className='text-gray-800 font-sans font-light lg:hidden'>{service.title}</h4>
                                             </div>
                                             <div>
-                                                <p className='text-black font-sans lg:hidden'>
-                                                    {service.description}
+                                                <p className='text-gray-800 font-sans font-extralight lg:hidden'>
+                                                    {isMobile
+                                                        ? service.description.length > 150
+                                                            ? service.description.substring(0, 150) + "..."
+                                                            : service.description
+                                                        : service.description}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div className='lg:w-1/2 hidden lg:flex lg:flex-col py-6'> 
-                                        <h4 className='text-xl text-gray-800 font-sans font-bold'>{service.title}</h4>
-                                        <p className='text-gray-800 font-sans'>
-                                            {service.description}
-                                        </p>
+
+                                    <div className='lg:w-2/5 hidden lg:flex lg:flex-col py-20 pr-10'>
+                                        <h4 className='text-xl text-gray-800 font-sans font-light'>{service.title}</h4>
+                                        <p className='text-gray-600 font-sans font-extralight leading-none pt-4 text-sm'
+                                            dangerouslySetInnerHTML={{ __html: service.description }}
+                                        ></p>
+                                        <ul className="pt-4">
+                                            {Object.entries(service.includes || {}).map((text, index) => (
+                                                <li key={index} className="flex items-start space-x-2">
+                                                    <span className="bg-green-500 text-sm text-white"> <IoMdCheckmark /> </span>
+                                                    <p className="text-xs font-sans font-extralight leading-[1] text-gray-600">{text}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {/* Botón de envío */}
+                                        <button
+                                            type="submit"
+                                            className="button-normal w-3/4 ml-[25%] bg-[#36a8b2] hover:bg-blue-600 mt-28">
+                                            Lock in the best price for your business
+                                            <IoIosArrowForward className="pl-2 w-5 h-5" />
+                                        </button>
                                     </div>
-                                    <div className="img lg:w-1/2">
-                                        <img src={service.image} alt="" className='lg:object-cover lg:rounded-lg lg:bottom-0'/>
+                                    <div className="img lg:w-3/5">
+                                        <img src={service.image} alt="" className='lg:object-cover lg:rounded-lg lg:bottom-0' />
                                     </div>
                                 </div>
                             </div>)

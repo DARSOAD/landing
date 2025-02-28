@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Office Cleaning Sydney",
+        "description": "A clean work environment is not just about aesthetics; it plays a crucial role in maintaining a healthy, productive, and professional workplace.<br><br>Our expert cleaning service in Sydney ensures that every corner of your office remains spotless, free of dust, dirt, and harmful bacteria. We use eco-friendly cleaning products and advanced sanitization techniques to provide you with optimal results, ensuring your workspace meets the highest standards of hygiene and cleanliness.",
+        "image": "/services/service1.webp",
+        "includes": {
+            "Dusting, Vacuuming & Surface Sanitization": "Removes dust, allergens, and bacteria from all surfaces.",
+            "Restroom & Kitchen Cleaning": "Thorough cleaning of sinks, toilets, and appliances.",
+            "Trash Removal & Recycling Management": "Efficient waste disposal and recycling.",
+            "Disinfection of High-Touch Areas": "Sanitization of handles, switches, and desks.",
+            "Customizable Cleaning Schedules": "Flexible cleaning plans tailored to your needs."
+        }
+    },
+    {
+        "title": "Dusting, Vacuuming & Surface Sanitization",
+        "description": "Dust and allergens can accumulate quickly in an office setting, leading to an unhealthy environment that affects employee productivity and well-being.<br><br>Our professional cleaning service focuses on thorough dust removal, deep vacuuming of carpets and upholstery, and complete surface sanitization. We ensure that your workspace remains fresh and allergen-free, reducing respiratory irritants and maintaining a clean atmosphere.",
+        "image": "/services/service2.webp",
+        "includes": {
+            "Thorough Dust Removal": "Removes dust from desks, shelves, and workstations.",
+            "Carpet & Upholstery Vacuuming": "Deep vacuuming to remove embedded dirt.",
+            "Surface Disinfection": "Kills bacteria on shared office surfaces."
+        }
+    },
+    {
+        "title": "Restroom & Kitchen Cleaning",
+        "description": "Maintaining hygiene in restrooms and kitchens is essential for a safe and sanitary workplace.<br><br>Our specialized cleaning service includes deep sanitation of toilets, sinks, mirrors, and kitchen appliances to prevent cross-contamination and ensure a healthy environment for employees.",
+        "image": "/services/service3.webp",
+        "includes": {
+            "Restroom Sanitization": "Cleans and disinfects toilets, sinks, and mirrors.",
+            "Kitchen Cleaning": "Wipes down countertops and appliances.",
+            "Trash Disposal": "Removes waste and sanitizes bins."
+        }
+    },
+    {
+        "title": "Trash Removal & Recycling",
+        "description": "An efficient waste management system is essential for maintaining a clean, organized, and eco-friendly office.<br><br>Our trash removal and recycling services ensure that waste is collected, sorted, and disposed of responsibly, keeping your workspace clutter-free.",
+        "image": "/services/service4.webp",
+        "includes": {
+            "Regular Waste Collection": "Scheduled trash removal to maintain cleanliness.",
+            "Recycling Management": "Proper sorting and disposal of recyclables.",
+            "Hazardous Waste Handling": "Safe disposal of electronic and hazardous waste."
+        }
+    },
+    {
+        "title": "Disinfection of High-Touch Areas",
+        "description": "High-touch surfaces, such as doorknobs, keyboards, phones, and shared workspaces, are hotspots for germs and bacteria.<br><br>Our specialized disinfection service targets these frequently touched surfaces, using hospital-grade disinfectants to eliminate harmful pathogens.",
+        "image": "/services/service5.webp",
+        "includes": {
+            "Door Handle Sanitization": "Disinfects door handles and push plates.",
+            "Light Switch Cleaning": "Removes bacteria from light switches.",
+            "Shared Equipment Disinfection": "Sanitizes office phones and keyboards."
+        }
+    }
+]

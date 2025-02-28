@@ -4,11 +4,11 @@ import { IoMdCheckmark } from "react-icons/io";
 const Features= () => {
     return (
         
-        <div className="text-white mt-8 px-2 hidden lg:block border-l-4">
-            <p className="mt-4 font-sans text-sm text-left">
-                A clean workspace is essential for productivity, professionalism, and a lasting impression. We offer high-quality commercial cleaning at unbeatable prices – and if you find a lower quote, we’ll match it or beat it!
+        <div className="text-white mt-8 mx-2 px-4 lg:block border-l-4 lg:!mt-36 lg:border-l-2 lg:py-1">
+            <p className="mt-4 font-sans text-xs text-left font-extralight leading-[1.1] lg:mt-0">
+                We offer high-quality commercial cleaning at unbeatable prices – and if you find a lower quote, we’ll match it or beat it!
             </p>
-            <ul className="space-y-1 pt-4">
+            <ul className="pt-2">
             {[
                 "Best price guarantee – We’ll match or beat any competitor’s quote!",
                 "Experienced & professional cleaning team for all business types",
@@ -16,9 +16,9 @@ const Features= () => {
                 "Flexible cleaning schedules – Availability for emergency cleaning",
                 "100% satisfaction guarantee",
             ].map((text, index) => (
-                <li key={index} className="flex items-start space-x-3">
+                <li key={index} className="flex items-start space-x-2">
                 <span className="bg-green-500 text-xs"> <IoMdCheckmark/> </span>
-                <p className="text-xs font-sans font-thin">{text}</p>
+                <p className="text-xs font-sans font-extralight leading-[1]">{text}</p>
                 </li>
             ))}
             </ul>

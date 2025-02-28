@@ -1,0 +1,23 @@
+[
+    {
+        "alt": "Companie 1",
+        "image": "/companies/companie1.webp"
+    },
+    {
+        "alt": "Companie 2",
+        "image": "/companies/companie2.webp"
+    },
+    {
+        "alt": "Companie 3",
+        "image": "/companies/companie3.webp"
+    },
+    {
+        "alt": "Companie 4",
+        "image": "/companies/companie4.webp"
+    },
+    {
+        "alt": "Companie 5",
+        "image": "/companies/companie5.webp"
+    }
+]
+

@@ -17,7 +17,7 @@ interface ServiceProps {
 const ServiceItem = ({ data, type }: ServiceProps) => {
     return (
         <>
-            <div className="max-w-md bg-white rounded-2xl shadow-lg overflow-hidden px-4">
+            <div className="max-w-md bg-white rounded-2xl overflow-hidden">
                 {/* Imagen */}
                 <div className="w-full h-48 relative">
                     <Image
@@ -25,27 +25,29 @@ const ServiceItem = ({ data, type }: ServiceProps) => {
                         alt={data.header}
                         layout="fill"
                         objectFit="cover"
-                        className="rounded-t-2xl"
+                        className="rounded-2xl"
                     />
                 </div>
 
                 {/* Contenido */}
-                <div className="p-5">
+                <div className="py-5 space-y-4 px-6">
                     {/* Categoría */}
-                    <span className="inline-block bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full mb-2">
+                    <span className="inline-block bg-[#f1f2f3] text-[#999a9f] text-sm px-5 font-medium rounded-full">
                         {data.location}
                     </span>
 
                     {/* Título */}
-                    <h3 className="text-lg font-semibold text-gray-900">{data.header}</h3>
+                    <h3 className="text-lg font-light text-gray-800  leading-none">{data.header}</h3>
 
                     {/* Descripción */}
-                    <p className="text-gray-600 text-sm mt-2">
-                        {data.description}
+                    <p className="text-[#919197] text-sm">
+                        {data.description.length > 180 
+                            ? data.description.substring(0, 180) + "..."
+                            : data.description}
                     </p>
 
                     {/* Fecha */}
-                    <p className="text-gray-800 font-bold text-xs mt-4">{data.date}</p>
+                    <p className="text-gray-600 font-semibold text-xs uppercase !mt-8">{data.date}</p>
                 </div>
             </div>
         </>
