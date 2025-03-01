@@ -2,6 +2,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { sendEmail } from "@/utils/api";
 
 export default function Formhead() {
     const [formData, setFormData] = useState({
@@ -10,15 +11,25 @@ export default function Formhead() {
         service: "Hotel cleaning service",
     });
 
+    const [loading, setLoading] = useState(false);
+    
     // Especificamos el tipo del evento en TypeScript
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("Form Data Submitted:", formData);
-        // Aquí podrías enviar los datos a una API
+        setLoading(true); // Activar loading en el botón
+
+        const result = await sendEmail(formData);
+        alert(result.message); // Mostrar mensaje al usuario
+
+        if (result.success) {
+            setFormData({ companyName: "", mobile: "", service: "Hotel cleaning service" });
+        }
+
+        setLoading(false); // Desactivar loading
     };
 
     return (
@@ -45,7 +56,7 @@ export default function Formhead() {
                         className="input-custom"
                     />
 
-                    <Select>
+                    <Select onValueChange={(value) => setFormData({ ...formData, service: value })}>
                         <SelectTrigger className="input-custom">
                             <SelectValue placeholder="Tell us your needs" />
                         </SelectTrigger>
@@ -60,7 +71,7 @@ export default function Formhead() {
                     <button
                         type="submit"
                         className="button-normal w-3/4 ml-[25%] bg-[#36a8b2] hover:bg-blue-600">
-                        Lock in the best price for your business
+                        {loading ? "Sending..." : "Lock in the best price for your business"}
                         <IoIosArrowForward className="pl-2 w-5 h-5" />
                     </button>
                 </form>

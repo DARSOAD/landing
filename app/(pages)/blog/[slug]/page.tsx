@@ -4,8 +4,9 @@ import blogData from "@/app/data/dataServices.json";
 import About from "@/app//components/About";
 import Header from "@/app//components/Header";
 import Promo from "@/app//components/Promo";
-import TestimoniialTwo from "@/app//components/TestimonialTwo";
-import testimonialData from "@/app//data/dataTestimonial.json"
+import TestimoniialTwo from "@/app/components/TestimonialTwo";
+import testimonialData from "@/app/data/dataTestimonial.json"
+import companiesData from "@/app/data/dataCompanies.json"
 import Companies from "@/app//components/Companies";
 import Choose from "@/app//components/Choose";
 import Footer from "@/app//components/Footer";
@@ -40,7 +41,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
             </div>
             <TestimoniialTwo data={testimonialData}/>
-            <Companies/>
+            <Companies data={companiesData} />
             <Choose/>
             <Footer/>
             
