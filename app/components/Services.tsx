@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import ServiceItem from "@/app/components/service/Serviceitem";
 

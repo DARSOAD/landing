@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Formhead from "./about/Formhead";
 
 export default function Video() {
     useEffect(() => {

@@ -1,10 +1,5 @@
 import Image from "next/image";
 
-interface ReviewsImagesProps {
-    className?: string;
-}
-  
-
 export default function ReviewsImages() {
     return (
         <div className="w-full flex flex-col justify-start px-6 lg:px-0 lg:py-4 pt-8">

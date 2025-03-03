@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Logo from "@/public/images/logo.svg"; // Importa el SVG
 import { FaRegUserCircle } from "react-icons/fa";
 

@@ -1,7 +1,6 @@
 "use client";
 
 import Form from "./choose/Form";
-import ReviewsImages from "./about/ReviewsImages";
 
 
 const Choose = () => {

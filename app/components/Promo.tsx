@@ -21,7 +21,7 @@ export default function Promo() {
         "
         >
             {/* Texto superior */}
-            <div className="absolute top-8 right-1 transform text-gray-500 font-sans w-4/5 text-xs lg:text-xl lg:top-28 lg:w-3/4 leading-none">
+            <div className="absolute top-8 right-1 transform text-gray-500 font-sans w-4/5 text-xs lg:text-xl lg:top-28 lg:w-3/4 leading-none lg:leading-4">
                 <h3 className="font-extralight mb-0">We’ll beat any competitor’s price, Guaranteed!</h3>
                 <p className="font-light mt-0">Found a cheaper cleaning quote?</p>
                 <p className="font-extralight">We’ll match it or beat it!</p>

@@ -2,7 +2,6 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { sendEmail } from "@/utils/api";
 
 export default function Formhead() {
     const [formData, setFormData] = useState({
@@ -13,23 +12,36 @@ export default function Formhead() {
 
     const [loading, setLoading] = useState(false);
     
-    // Especificamos el tipo del evento en TypeScript
+    // Manejo de cambios en los inputs
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setLoading(true); // Activar loading en el botón
+        setLoading(true);
 
-        const result = await sendEmail(formData);
-        alert(result.message); // Mostrar mensaje al usuario
+        try {
+            const response = await fetch("https://commercialcleaningsydney.com/public/sendMail.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: new URLSearchParams(formData).toString(),
+            });
 
-        if (result.success) {
-            setFormData({ companyName: "", mobile: "", service: "Hotel cleaning service" });
+            const result = await response.json();
+            alert(result.message);
+
+            if (result.success) {
+                setFormData({ companyName: "", mobile: "", service: "Hotel cleaning service" });
+            }
+        } catch (error) {
+            console.error("Error in the request:", error);
+            alert("Error sending the email.");
         }
 
-        setLoading(false); // Desactivar loading
+        setLoading(false);
     };
 
     return (
@@ -61,9 +73,9 @@ export default function Formhead() {
                             <SelectValue placeholder="Tell us your needs" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="opcion1">Hotel cleaning service</SelectItem>
-                            <SelectItem value="opcion2">Office cleaning service</SelectItem>
-                            <SelectItem value="opcion3">Residential cleaning</SelectItem>
+                            <SelectItem value="Hotel cleaning service">Hotel cleaning service</SelectItem>
+                            <SelectItem value="Office cleaning service">Office cleaning service</SelectItem>
+                            <SelectItem value="Residential cleaning">Residential cleaning</SelectItem>
                         </SelectContent>
                     </Select>
 

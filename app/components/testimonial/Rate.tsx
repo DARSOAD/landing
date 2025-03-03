@@ -7,7 +7,7 @@ type RateProps = {
 };
 
 export default function Rate({ currentRate, style }: RateProps) {
-    let arrOfStar = [];
+    const arrOfStar = [];
 
     for (let i = 0; i < 5; i++) {
         if (i < currentRate) {

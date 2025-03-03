@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Rate from "../testimonial/Rate";
 
 interface ServiceItemData {
     image: string;
@@ -14,7 +13,7 @@ interface ServiceProps {
     type: string;
 }
 
-const ServiceItem = ({ data, type }: ServiceProps) => {
+const ServiceItem = ({ data }: ServiceProps) => {
     return (
         <>
             <div className="max-w-md bg-white rounded-2xl overflow-hidden">

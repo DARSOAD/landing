@@ -1,19 +1,7 @@
+
 import Logo from "@/public/images/logo.svg"; // Importa el SVG
 import servicesData from "../data/dataServices.json"
 import Link from "next/link";
-
-interface ServiceItemData {
-    image: string;
-    location: string;
-    header: string;
-    date: string;
-    description: string;
-}
-
-interface ServiceProps {
-    data: ServiceItemData[];
-    classname?: string;  // classname puede ser opcional
-}
 
 const Footer = () => {
     return (
@@ -27,7 +15,7 @@ const Footer = () => {
                         </h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-300">
                             {servicesData.map((service) => (
-                                <Link href={`/blog/${service.slug}`}>
+                                <Link key={service.slug} href={`/blog/${service.slug}`}>
                                     {service.location}
                                 </Link>                                
                             ))}
