@@ -28,8 +28,8 @@ const Companies = ({ data }: CompaniesProps) => {
         lg:py-20
         "
                 >
-                        <h4 className="text-gray-800 font-sans text-center w-full text-sm pt-8 px-8 lg:text-2xl leading-none">Trusted for all this companies all arround Sydney</h4>
-                        <div className="md:mt-10 mt-7 w-full lg:pr-10 lg:pl-14">
+                        <h4 className="text-gray-800 font-sans text-center w-full text-sm pt-8 px-8 lg:text-2xl leading-none 2xl:pt-4">Trusted for all this companies all arround Sydney</h4>
+                        <div className="lg:mt-10 mt-7 w-full lg:pr-24 lg:pl-20 2xl:mt-1">
                                 <Swiper
                                         spaceBetween={1}
                                         slidesPerView={3}
@@ -40,15 +40,15 @@ const Companies = ({ data }: CompaniesProps) => {
                                                 640: { slidesPerView: 3, spaceBetween: 10 },
                                                 1024: { slidesPerView: 4, spaceBetween: 1 },
                                         }}
-                                        className="h-full relative style-section"
+                                        className="h-full relative style-section 2xl:h-[17vh]"
                                 >
                                         {data.map((item, index) => (
                                                 <SwiperSlide key={index}>
-                                                        <div className="bg-img lg:w-[160px] w-40 lg:h-[80px] h-20 overflow-hidden">
+                                                        <div className="bg-img lg:w-full w-40 lg:h-[50vh] h-20 overflow-hidden 2xl:h-full">
                                                                 <Image
                                                                         width={4000}
                                                                         height={2000}
-                                                                        className="w-full h-full object-cover block"
+                                                                        className="w-full h-full object-contain block"
                                                                         src={item.image}
                                                                         alt={item.image}
                                                                         unoptimized

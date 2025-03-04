@@ -22,14 +22,14 @@ export default function Home() {
   return (
     <>
       <Header/>
-      <About/>
+      <About data={servicesEspecificData}/>
       <Promo/>
       <Portfolio data={servicesEspecificData}/>
       <Video/>
       <TestimoniialTwo data={testimonialData}/>
       <Companies data={companiesData}/>
       <Services data={servicesData}/>
-      <Choose/>
+      <Choose data={servicesEspecificData}/>
       <Footer/>
       
     </>

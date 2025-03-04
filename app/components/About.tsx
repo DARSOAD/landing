@@ -3,7 +3,18 @@ import Formhead from "./about/Formhead";
 import ReviewsImages from "./about/ReviewsImages";
 
 
-const About = () => {
+interface ServiceItemData {
+    title: string;
+    description: string;
+    image: string;
+    includes: Record<string, string | undefined>;
+}
+
+interface ServiceProps {
+    data: ServiceItemData[];
+}
+
+const About = ({ data }: ServiceProps) => {
     return (
         <section id="about" 
         className="
@@ -28,8 +39,8 @@ const About = () => {
         "
     >
         {/* Columna Izquierda - Texto y Características */}
-        <div className="px-6 w-full lg:w-[60%] text-left space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-sans font-extralight lg:absolute lg:top-40 lg:left-[11%] lg:z-10 leading-tight text-white">
+        <div className="px-6 w-full lg:w-[60%] text-left space-y-6 ">
+            <h2 className="text-2xl lg:text-3xl font-sans font-extralight lg:absolute lg:top-40 lg:left-[11%] lg:z-10 leading-tight text-white 2xl:text-4xl 2xl:left-[9%]">
                 Sydney’s best commercial cleaning, we’ll beat any price!
             </h2>
             <Features />
@@ -39,8 +50,8 @@ const About = () => {
         </div>
     
         {/* Columna Derecha - Formulario */}
-        <div className="px-6 w-full lg:w-[40%] flex justify-end lg:justify-start">
-            <Formhead />            
+        <div className="px-6 w-full lg:w-[40%] flex justify-end lg:justify-start ">
+            <Formhead data={data} />            
         </div>
     
         {/* Imágenes de Reseñas en Móviles */}

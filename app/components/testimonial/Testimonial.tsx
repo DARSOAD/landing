@@ -30,12 +30,14 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
     return (
         <>
             {type === 'style-two' && (
-                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white rounded-2xl flex flex-col items-start gap-5 h-full font-[Arial] shadow-lg">
+                <div className="item sm:px-8 px-6 sm:py-10 py-7 bg-white flex flex-col items-start gap-5 h-full font-[Arial] shadow-sm lg:shadow-none">
                     <div className="flex flex-row space-x-2">
                         <div className="bg-img lg:w-[40px] w-10 lg:h-[40px] h-10 rounded-full overflow-hidden flex-shrink-0"
                             style={{ backgroundColor: `#${bgColor}` }}
                         >
-                            <Image width={4000} height={4000} className="w-full h-full object-cover block" src={data.image} alt={data.image} unoptimized />
+                            <Image width={4000} height={4000} 
+                                    className="w-[80%] h-[80%] object-center block mx-auto my-1" 
+                                    src={data.image} alt={data.image} unoptimized />
                         </div>
                         <div className="content font-[Arial]">
                         <div className="flex flex-col">
@@ -53,7 +55,7 @@ const TestimonialItem = ({ data, type }: TestimonialItemProps) => {
                             </div>
                         </div>
                         <p className="desc body2 mt-3 text-gray-700 font-[Arial] leading-[1.2]">{data.review}</p>
-                        <div className="flex flex-row space-x-2 text-gray-400 mt-5">
+                        <div className="flex flex-row space-x-4 text-gray-400 mt-5">
                             <AiOutlineLike />
                             <IoShareSocial />
                         </div>

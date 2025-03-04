@@ -1,54 +1,135 @@
 [
     {
-        "title": "Office Cleaning Sydney",
-        "description": "A clean work environment is not just about aesthetics; it plays a crucial role in maintaining a healthy, productive, and professional workplace.<br><br>Our expert cleaning service in Sydney ensures that every corner of your office remains spotless, free of dust, dirt, and harmful bacteria. We use eco-friendly cleaning products and advanced sanitization techniques to provide you with optimal results, ensuring your workspace meets the highest standards of hygiene and cleanliness.",
+        "title": "Office Cleaning",
+        "description": "Professional Office Cleaning Services – Clean, Hygienic & Productive Workspaces\nA clean office is essential for productivity, employee health, and a great first impression.",
         "image": "/services/service1.webp",
         "includes": {
-            "Dusting, Vacuuming & Surface Sanitization": "Removes dust, allergens, and bacteria from all surfaces.",
-            "Restroom & Kitchen Cleaning": "Thorough cleaning of sinks, toilets, and appliances.",
-            "Trash Removal & Recycling Management": "Efficient waste disposal and recycling.",
-            "Disinfection of High-Touch Areas": "Sanitization of handles, switches, and desks.",
-            "Customizable Cleaning Schedules": "Flexible cleaning plans tailored to your needs."
+            "Dusting & disinfecting desks, keyboards, and shared spaces": "Ensures a hygienic workspace.",
+            "Vacuuming carpets, mopping floors & sanitizing high-touch areas": "Maintains cleanliness and hygiene.",
+            "Kitchen, breakroom, and restroom cleaning with eco-friendly products": "Promotes a healthy environment.",
+            "Waste removal and recycling solutions": "Encourages sustainability."
         }
     },
     {
-        "title": "Dusting, Vacuuming & Surface Sanitization",
-        "description": "Dust and allergens can accumulate quickly in an office setting, leading to an unhealthy environment that affects employee productivity and well-being.<br><br>Our professional cleaning service focuses on thorough dust removal, deep vacuuming of carpets and upholstery, and complete surface sanitization. We ensure that your workspace remains fresh and allergen-free, reducing respiratory irritants and maintaining a clean atmosphere.",
+        "title": "Gym Cleaning",
+        "description": "Expert Gym Cleaning & Sanitization – Keep Your Gym Germ-Free & Safe\nGyms are high-traffic areas where bacteria and viruses thrive.",
         "image": "/services/service2.webp",
         "includes": {
-            "Thorough Dust Removal": "Removes dust from desks, shelves, and workstations.",
-            "Carpet & Upholstery Vacuuming": "Deep vacuuming to remove embedded dirt.",
-            "Surface Disinfection": "Kills bacteria on shared office surfaces."
+            "Daily sanitization of gym equipment, machines, and weights": "Reduces bacteria and germs.",
+            "Deep cleaning of floors, mats, and high-touch surfaces": "Enhances hygiene and safety.",
+            "Locker room, shower, and restroom sanitization": "Ensures a fresh and clean environment.",
+            "Air purification & odor control solutions": "Improves air quality."
         }
     },
     {
-        "title": "Restroom & Kitchen Cleaning",
-        "description": "Maintaining hygiene in restrooms and kitchens is essential for a safe and sanitary workplace.<br><br>Our specialized cleaning service includes deep sanitation of toilets, sinks, mirrors, and kitchen appliances to prevent cross-contamination and ensure a healthy environment for employees.",
+        "title": "Industrial Cleaning",
+        "description": "Industrial Cleaning Experts – Safe, Efficient & Compliant Services\nIndustrial sites require heavy-duty cleaning to maintain safety and hygiene.",
         "image": "/services/service3.webp",
         "includes": {
-            "Restroom Sanitization": "Cleans and disinfects toilets, sinks, and mirrors.",
-            "Kitchen Cleaning": "Wipes down countertops and appliances.",
-            "Trash Disposal": "Removes waste and sanitizes bins."
+            "Warehouse floor degreasing & high-pressure washing": "Ensures a safe workspace.",
+            "Machinery, production line & equipment cleaning": "Maintains operational efficiency.",
+            "Hazardous waste removal & spill cleanup": "Complies with safety regulations.",
+            "Ventilation, duct, and exhaust system maintenance": "Improves air circulation."
         }
     },
     {
-        "title": "Trash Removal & Recycling",
-        "description": "An efficient waste management system is essential for maintaining a clean, organized, and eco-friendly office.<br><br>Our trash removal and recycling services ensure that waste is collected, sorted, and disposed of responsibly, keeping your workspace clutter-free.",
+        "title": "Strata Cleaning",
+        "description": "Reliable Strata Cleaning – Keeping Residential & Commercial Properties Pristine\nWe provide specialized strata cleaning services.",
         "image": "/services/service4.webp",
         "includes": {
-            "Regular Waste Collection": "Scheduled trash removal to maintain cleanliness.",
-            "Recycling Management": "Proper sorting and disposal of recyclables.",
-            "Hazardous Waste Handling": "Safe disposal of electronic and hazardous waste."
+            "Common area cleaning – lobbies, hallways, and stairwells": "Maintains a welcoming environment.",
+            "Garbage disposal & bin room maintenance": "Ensures cleanliness in waste areas.",
+            "Window & glass cleaning for high-rise buildings": "Keeps buildings looking fresh.",
+            "Garden maintenance & pressure washing for outdoor spaces": "Enhances curb appeal."
         }
     },
     {
-        "title": "Disinfection of High-Touch Areas",
-        "description": "High-touch surfaces, such as doorknobs, keyboards, phones, and shared workspaces, are hotspots for germs and bacteria.<br><br>Our specialized disinfection service targets these frequently touched surfaces, using hospital-grade disinfectants to eliminate harmful pathogens.",
+        "title": "Childcare Cleaning",
+        "description": "Safe & Eco-Friendly Childcare Cleaning Services – Protecting Little Ones\nChildren are vulnerable to germs, so we use non-toxic, child-safe products.",
         "image": "/services/service5.webp",
         "includes": {
-            "Door Handle Sanitization": "Disinfects door handles and push plates.",
-            "Light Switch Cleaning": "Removes bacteria from light switches.",
-            "Shared Equipment Disinfection": "Sanitizes office phones and keyboards."
+            "Disinfecting toys, play equipment & shared surfaces": "Reduces the spread of germs.",
+            "Sanitizing restrooms, sinks & changing stations": "Maintains hygiene and safety.",
+            "Deep cleaning carpets & soft surfaces to remove allergens": "Improves air quality.",
+            "Ventilation cleaning for better indoor air quality": "Ensures a fresh environment."
+        }
+    },
+    {
+        "title": "School Cleaning",
+        "description": "Professional School Cleaning – Healthy Learning Environments\nSchools are high-contact environments where cleanliness is critical.",
+        "image": "/services/service6.webp",
+        "includes": {
+            "Daily classroom sanitization & desk disinfection": "Promotes a safe learning environment.",
+            "Cafeteria, gym, and library deep cleaning": "Ensures hygienic shared spaces.",
+            "Restroom & locker room hygiene maintenance": "Provides a clean experience.",
+            "Playground & outdoor area pressure washing": "Maintains cleanliness and safety."
+        }
+    },
+    {
+        "title": "Hotel Cleaning",
+        "description": "Luxury Hotel Cleaning – Impress Your Guests with Spotless Spaces\nA hotel’s cleanliness impacts guest satisfaction and reviews.",
+        "image": "/services/service7.webp",
+        "includes": {
+            "Daily housekeeping & turn-down service": "Ensures a comfortable stay.",
+            "Deep carpet, upholstery & mattress cleaning": "Enhances room hygiene.",
+            "Sanitizing lobbies, hallways, and banquet halls": "Maintains an elegant atmosphere.",
+            "Eco-friendly cleaning for a sustainable hotel experience": "Supports green initiatives."
+        }
+    },
+    {
+        "title": "Medical Cleaning",
+        "description": "Medical & Healthcare Cleaning – Infection Control Experts\nMedical facilities require strict hygiene standards.",
+        "image": "/services/service8.webp",
+        "includes": {
+            "Sterilization of treatment rooms, equipment & patient areas": "Ensures compliance with health standards.",
+            "Proper waste disposal & biohazard cleaning": "Prevents contamination.",
+            "Deep cleaning of waiting rooms & reception areas": "Improves patient safety.",
+            "Compliance with Australian health regulations": "Maintains high hygiene levels."
+        }
+    },
+    {
+        "title": "Restaurant Cleaning",
+        "description": "Restaurant & Kitchen Deep Cleaning – Maintain 5-Star Hygiene Ratings\nRestaurants must meet strict health and safety standards.",
+        "image": "/services/service9.webp",
+        "includes": {
+            "Grease & oil removal from kitchen surfaces": "Prevents fire hazards and ensures cleanliness.",
+            "Disinfecting tables, chairs & dining areas": "Maintains high sanitation standards.",
+            "Deep-cleaning floors & food prep areas": "Removes food residue and bacteria.",
+            "Commercial oven & exhaust hood cleaning": "Enhances kitchen safety and efficiency."
+        }
+    },
+    {
+        "title": "Shopping Center Cleaning",
+        "description": "Shopping Centre Cleaning – Keep Your Retail Space Spotless With thousands of visitors daily, shopping centers require intensive cleaning. We provide:",
+        "image": "/services/service11.webp",
+        "includes": {
+            "Escalator & elevator cleaning": "Escalator & elevator cleaning.",
+            "Food court sanitization & waste disposal": "Food court sanitization & waste disposal",
+            "Glass, window & signage cleaning": "Glass, window & signage cleaning",
+            "Parking lot & outdoor maintenance": "Parking lot & outdoor maintenance"
+        }
+    },
+    {
+        "title": "Commercial Building Cleaning",
+        "description": "Commercial Building Cleaning – High-Quality Maintenance Services We provide top-tier commercial cleaning for:",
+        "image": "/services/service12.webp",
+        "includes": {
+            "Corporate offices & showrooms": "Corporate offices & showrooms",
+            "Retail stores & shopping centers": "Retail stores & shopping centers",
+            "Banks, government buildings & conference venues": "Banks, government buildings & conference venues",
+            "High-rise building window cleaning": "High-rise building window cleaning"
+        }
+    },
+    
+    {
+        "title": "Bar Cleaning",
+        "description": "Bar & Nightclub Cleaning – Keep Your Venue Fresh & Inviting\nA clean bar creates a better atmosphere and customer experience.",
+        "image": "/services/service13.webp",
+        "includes": {
+            "Deep cleaning sticky floors & bar tops": "Removes spills and residue effectively.",
+            "Sanitizing glassware, counters & seating areas": "Ensures a hygienic environment.",
+            "Bathroom hygiene & odor control": "Keeps restrooms fresh and sanitized.",
+            "Grease & residue removal from kitchen areas": "Maintains cleanliness in food prep spaces."
         }
     }
 ]

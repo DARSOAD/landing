@@ -3,7 +3,18 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export default function Form() {
+interface ServiceItemData {
+    title: string;
+    description: string;
+    image: string;
+    includes: Record<string, string | undefined>;
+}
+
+interface ServiceProps {
+    data: ServiceItemData[];
+}
+
+export default function Form({ data }: ServiceProps) {
     const [formData, setFormData] = useState({
         companyName: "",
         mobile: "",
@@ -47,7 +58,7 @@ export default function Form() {
     return (
         <div className="flex items-center justify-center pt-6 lg:pt-0">
             <div className="relative lg:pt-32 pb-8 lg:pb-20 max-w-md w-full">
-                <form onSubmit={handleSubmit} className="space-y-4 text-gray-800 lg:space-y-10">
+                <form onSubmit={handleSubmit} className="space-y-4 text-gray-800 lg:space-y-6">
                     {/* Campo: Company Name */}
                     <input
                         type="text"
@@ -72,13 +83,13 @@ export default function Form() {
 
                     {/* Campo: Servicio */}
                     <Select onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                        <SelectTrigger className="input-custom2">
+                        <SelectTrigger className="input-custom2 2xl:!h-14">
                             <SelectValue placeholder="Tell us your needs" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="Hotel cleaning service">Hotel cleaning service</SelectItem>
-                            <SelectItem value="Office cleaning service">Office cleaning service</SelectItem>
-                            <SelectItem value="Residential cleaning">Residential cleaning</SelectItem>
+                            {data.map((item, index) => (
+                                <SelectItem key={index} value={item.title}>{item.title}</SelectItem>
+                            ))}
                         </SelectContent>
                     </Select>
 

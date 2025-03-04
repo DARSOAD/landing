@@ -3,7 +3,19 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export default function Formhead() {
+interface ServiceItemData {
+    title: string;
+    description: string;
+    image: string;
+    includes: Record<string, string | undefined>;
+}
+
+interface ServiceProps {
+    data: ServiceItemData[];
+}
+
+
+export default function Formhead({ data }: ServiceProps) {
     const [formData, setFormData] = useState({
         companyName: "",
         mobile: "",
@@ -46,7 +58,7 @@ export default function Formhead() {
 
     return (
         <div className="flex items-center justify-center pt-6">
-            <div className="relative bg-gray-200 bg-opacity-10 backdrop-blur-md px-8 pt-24 lg:pt-32 pb-8 lg:pb-20 rounded-3xl shadow-lg max-w-md w-full">
+            <div className="relative bg-gray-200 bg-opacity-10 backdrop-blur-md px-8 pt-24 lg:pt-32 pb-8 lg:pb-20 rounded-3xl shadow-lg max-w-md w-full 2xl:pt-40 2xl:pb-32">
                 <form onSubmit={handleSubmit} className="space-y-4" id='formhead'>
                     {/* Campo: Company Name */}
                     <input
@@ -69,13 +81,13 @@ export default function Formhead() {
                     />
 
                     <Select onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                        <SelectTrigger className="input-custom">
+                        <SelectTrigger className="input-custom 2xl:!h-14">
                             <SelectValue placeholder="Tell us your needs" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="Hotel cleaning service">Hotel cleaning service</SelectItem>
-                            <SelectItem value="Office cleaning service">Office cleaning service</SelectItem>
-                            <SelectItem value="Residential cleaning">Residential cleaning</SelectItem>
+                        {data.map((item, index) => (
+                            <SelectItem key={index} value={item.title}>{item.title}</SelectItem>
+                        ))}                            
                         </SelectContent>
                     </Select>
 

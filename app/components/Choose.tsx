@@ -2,8 +2,18 @@
 
 import Form from "./choose/Form";
 
+interface ServiceItemData {
+    title: string;
+    description: string;
+    image: string;
+    includes: Record<string, string | undefined>;
+}
 
-const Choose = () => {
+interface ServiceProps {
+    data: ServiceItemData[];
+}
+
+const Choose = ({ data }: ServiceProps) => {
     return (
         <section id="about" 
         className="
@@ -15,7 +25,7 @@ const Choose = () => {
         bg-top 
         bg-no-repeat
         text-center
-        h-[60vh]
+        h-[70vh]
         flex flex-col 
         lg:flex-row
         justify-between 
@@ -29,22 +39,22 @@ const Choose = () => {
         "
     >
         <div className="px-16 w-full text-left space-y-0 lg:hidden">
-            <h5 className="leading-none text-xs lg:text-lg font-sans font-light text-[#586a80]">
+            <h5 className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#586a80]">
                 Why Choose Us for Commercial Cleaning in Sydney?
             </h5>
-            <p  className="leading-none text-xs lg:text-lg font-sans font-light text-[#96a3b0] ">
+            <p  className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#96a3b0] ">
                 At Oasis, we deliver high-quality, reliable, and affordable commercial cleaning services.
                 <br/>
                 Whether you run a corporate office, retail store, warehouse, or hospitality space, we ensure your workplace is spotless, hygienic, and inviting.
             </p>
-            <h5 className="leading-none text-xs lg:text-lg font-sans font-light text-[#586a80]">
+            <h5 className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#586a80]">
                 Let’s make your business shine! Get a free quote in just 1 hour! 
             </h5>
         </div>
     
         {/* Columna Derecha - Formulario */}
         <div className="px-16 w-full lg:w-[70%] flex justify-end">
-            <Form />            
+            <Form data={data}/>            
         </div>
         
         <div className="px-6 w-[30%] text-left space-y-0 hidden lg:block pt-32">

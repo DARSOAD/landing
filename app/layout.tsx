@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oasis",
+  title: "Commercial cleaning sydney",
   description: "Sydney’s best commercial cleaning, we’ll beat any price!",
 };
 

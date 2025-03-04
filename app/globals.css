@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: -#f9f9fa;
+  background-color: -#f9f9fa !important;
 }
 
 /* globals.css */
@@ -23,6 +23,7 @@ focus:ring-blue-400
   text-xs
   font-sans
   font-extralight
+  2xl:text-lg
 }
 #formhead .data-\[placeholder\]\:text-muted-foreground[data-placeholder] {
   color: hsl(0deg 0% 100%) !important;
@@ -42,11 +43,13 @@ text-gray-700
   focus:ring-2 
 focus:ring-[#888f90]
   text-xs
+  2xl:text-lg
 }
 
 .button-normal{
   @apply
   text-left px-3 py-2 rounded-full text-white text-xs font-extralight transition flex items-center justify-center font-sans leading-[1.1]
+  2xl:py-4
 }
 
 .p-experience{
@@ -125,7 +128,7 @@ focus:ring-[#888f90]
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#f9f9fa] text-foreground;
   }
 }
 
@@ -141,3 +144,4 @@ focus:ring-[#888f90]
 .list-testimonials .swiper {
   padding-bottom: 40px !important;
 }
+
