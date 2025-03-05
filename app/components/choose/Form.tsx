@@ -1,6 +1,6 @@
 "use client";
 import { IoIosArrowForward } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface ServiceItemData {
@@ -14,6 +14,12 @@ interface ServiceProps {
     data: ServiceItemData[];
 }
 
+declare global {
+    interface Window {
+        gtag?: (...args: unknown[]) => void;
+    }
+}
+
 export default function Form({ data }: ServiceProps) {
     const [formData, setFormData] = useState({
         companyName: "",
@@ -22,6 +28,16 @@ export default function Form({ data }: ServiceProps) {
     });
 
     const [loading, setLoading] = useState(false);
+    const [loadingVisible, setLoadingVisible] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+
+    useEffect(() => {
+        if (!loading) {
+            setLoadingVisible(false);
+            return;
+        }
+        setLoadingVisible(true);
+    }, [loading]);
 
     // Manejo de cambios en los inputs
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,8 +47,15 @@ export default function Form({ data }: ServiceProps) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
+        setErrorMessage("");
 
         try {
+            if (!formData.companyName || !formData.mobile || !formData.service) {
+                setErrorMessage("Please complete all required fields.");
+                setLoading(false);
+                return;
+            }
+
             const response = await fetch("https://commercialcleaningsydney.com/public/sendMail.php", {
                 method: "POST",
                 headers: {
@@ -45,11 +68,21 @@ export default function Form({ data }: ServiceProps) {
             alert(result.message);
 
             if (result.success) {
+                // 🔥 Registra la conversión en Google Ads
+                if (typeof window !== "undefined" && window.gtag) {
+                    window.gtag("event", "conversion", {
+                        send_to: "AW-16885861325/kCGVCK36laYaEM2X5_M-",
+                    });
+                }
+
+                // Resetea el formulario
                 setFormData({ companyName: "", mobile: "", service: "Hotel cleaning service" });
+            } else {
+                setErrorMessage("Error en el envío. Intenta de nuevo.");
             }
         } catch (error) {
             console.error("Error in the request:", error);
-            alert("Error sending the email.");
+            setErrorMessage("Error sending the email.");
         }
 
         setLoading(false);
@@ -93,13 +126,25 @@ export default function Form({ data }: ServiceProps) {
                         </SelectContent>
                     </Select>
 
+                    {errorMessage && <p className="text-sm text-[#b23636]">{errorMessage}</p>}
+
                     {/* Botón de envío */}
-                    <button
-                        type="submit"
-                        className="button-normal w-3/4 ml-[25%] bg-[#8897a9] hover:bg-blue-600">
-                        {loading ? "Sending..." : "Get your free quote now"}
-                        <IoIosArrowForward className="pl-2 w-5 h-5" />
-                    </button>
+                    {!loading && (
+                        <button
+                            type="submit"
+                            className="button-normal w-3/4 ml-[25%] bg-[#8897a9] hover:bg-blue-600">
+                            Get your free quote now
+                            <IoIosArrowForward className="pl-2 w-5 h-5" />
+                        </button>
+                    )}
+
+                    {/* Loader visible mientras `loading` es true */}
+                    {loadingVisible && (
+                        <div className="loader-container">
+                            <div className="loader"></div>
+                            <p>Sending...</p>
+                        </div>
+                    )}
                 </form>
             </div>
         </div>
