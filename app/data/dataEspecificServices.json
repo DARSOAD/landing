@@ -1,7 +1,7 @@
 [
     {
         "title": "Office Cleaning",
-        "description": "Professional Office Cleaning Services – Clean, Hygienic & Productive Workspaces\nA clean office is essential for productivity, employee health, and a great first impression.",
+        "description": "A spotless office enhances productivity, boosts morale, and leaves a lasting impression. We ensure a clean, sanitized, and organized workspace, reducing germs and creating a healthier, more efficient environment.",
         "image": "/services/service1.webp",
         "includes": {
             "Dusting & disinfecting desks, keyboards, and shared spaces": "Ensures a hygienic workspace.",
@@ -12,7 +12,7 @@
     },
     {
         "title": "Gym Cleaning",
-        "description": "Expert Gym Cleaning & Sanitization – Keep Your Gym Germ-Free & Safe\nGyms are high-traffic areas where bacteria and viruses thrive.",
+        "description": "Maintain a fresh, germ-free fitness space with deep cleaning and sanitization. We eliminate bacteria, sweat, and odors, ensuring a safe, inviting gym that keeps members comfortable and coming back.",
         "image": "/services/service2.webp",
         "includes": {
             "Daily sanitization of gym equipment, machines, and weights": "Reduces bacteria and germs.",
@@ -23,7 +23,7 @@
     },
     {
         "title": "Industrial Cleaning",
-        "description": "Industrial Cleaning Experts – Safe, Efficient & Compliant Services\nIndustrial sites require heavy-duty cleaning to maintain safety and hygiene.",
+        "description": "Ensure compliance, safety, and efficiency with expert industrial cleaning. We remove dust, grease, and debris, maintaining a hazard-free environment that protects employees and enhances operational productivity.",
         "image": "/services/service3.webp",
         "includes": {
             "Warehouse floor degreasing & high-pressure washing": "Ensures a safe workspace.",
@@ -34,7 +34,7 @@
     },
     {
         "title": "Strata Cleaning",
-        "description": "Reliable Strata Cleaning – Keeping Residential & Commercial Properties Pristine\nWe provide specialized strata cleaning services.",
+        "description": "Keep shared spaces immaculate with reliable strata cleaning. From lobbies to hallways, we ensure spotless, well-maintained common areas that enhance property value and resident satisfaction.",
         "image": "/services/service4.webp",
         "includes": {
             "Common area cleaning – lobbies, hallways, and stairwells": "Maintains a welcoming environment.",
@@ -45,7 +45,7 @@
     },
     {
         "title": "Childcare Cleaning",
-        "description": "Safe & Eco-Friendly Childcare Cleaning Services – Protecting Little Ones\nChildren are vulnerable to germs, so we use non-toxic, child-safe products.",
+        "description": "Protect children’s health with meticulous cleaning and disinfection. We target high-touch areas, eliminate germs, and use safe, non-toxic products to create a hygienic, secure environment for kids and staff.",
         "image": "/services/service5.webp",
         "includes": {
             "Disinfecting toys, play equipment & shared surfaces": "Reduces the spread of germs.",
@@ -56,7 +56,7 @@
     },
     {
         "title": "School Cleaning",
-        "description": "Professional School Cleaning – Healthy Learning Environments\nSchools are high-contact environments where cleanliness is critical.",
+        "description": "Promote learning with a sanitized, allergen-free school environment. We clean classrooms, cafeterias, and restrooms thoroughly, reducing illness spread and creating a healthier space for students and teachers.",
         "image": "/services/service6.webp",
         "includes": {
             "Daily classroom sanitization & desk disinfection": "Promotes a safe learning environment.",
@@ -67,7 +67,7 @@
     },
     {
         "title": "Hotel Cleaning",
-        "description": "Luxury Hotel Cleaning – Impress Your Guests with Spotless Spaces\nA hotel’s cleanliness impacts guest satisfaction and reviews.",
+        "description": "Deliver a five-star guest experience with flawless cleanliness. We ensure pristine rooms, spotless lobbies, and sanitized common areas, creating a welcoming, luxurious environment that leaves a lasting impression.",
         "image": "/services/service7.webp",
         "includes": {
             "Daily housekeeping & turn-down service": "Ensures a comfortable stay.",
@@ -78,7 +78,7 @@
     },
     {
         "title": "Medical Cleaning",
-        "description": "Medical & Healthcare Cleaning – Infection Control Experts\nMedical facilities require strict hygiene standards.",
+        "description": "Meet strict hygiene standards with expert medical cleaning. We disinfect clinics, hospitals, and treatment areas, ensuring a sterile, safe environment that protects patients and staff from harmful pathogens.",
         "image": "/services/service8.webp",
         "includes": {
             "Sterilization of treatment rooms, equipment & patient areas": "Ensures compliance with health standards.",
@@ -89,7 +89,7 @@
     },
     {
         "title": "Restaurant Cleaning",
-        "description": "Restaurant & Kitchen Deep Cleaning – Maintain 5-Star Hygiene Ratings\nRestaurants must meet strict health and safety standards.",
+        "description": "Hygiene is critical in food service. We deep-clean kitchens, dining areas, and restrooms, ensuring a spotless, compliant space that enhances customer confidence and meets health regulations.",
         "image": "/services/service9.webp",
         "includes": {
             "Grease & oil removal from kitchen surfaces": "Prevents fire hazards and ensures cleanliness.",
@@ -100,7 +100,7 @@
     },
     {
         "title": "Shopping Center Cleaning",
-        "description": "Shopping Centre Cleaning – Keep Your Retail Space Spotless With thousands of visitors daily, shopping centers require intensive cleaning. We provide:",
+        "description": "Attract shoppers with a clean, well-maintained retail space. We keep floors sparkling, restrooms fresh, and food courts spotless, ensuring an inviting atmosphere for customers and businesses.",
         "image": "/services/service11.webp",
         "includes": {
             "Escalator & elevator cleaning": "Escalator & elevator cleaning.",
@@ -111,7 +111,7 @@
     },
     {
         "title": "Commercial Building Cleaning",
-        "description": "Commercial Building Cleaning – High-Quality Maintenance Services We provide top-tier commercial cleaning for:",
+        "description": "Maintain a professional image with thorough commercial cleaning. We clean offices, lobbies, and common areas, ensuring a pristine, welcoming environment that enhances tenant satisfaction and business appeal.",
         "image": "/services/service12.webp",
         "includes": {
             "Corporate offices & showrooms": "Corporate offices & showrooms",
@@ -123,7 +123,7 @@
     
     {
         "title": "Bar Cleaning",
-        "description": "Bar & Nightclub Cleaning – Keep Your Venue Fresh & Inviting\nA clean bar creates a better atmosphere and customer experience.",
+        "description": "A clean bar keeps customers coming back. We remove spills, sanitize surfaces, and deep-clean restrooms, ensuring a fresh, hygienic space that meets health standards and enhances the nightlife experience.",
         "image": "/services/service13.webp",
         "includes": {
             "Deep cleaning sticky floors & bar tops": "Removes spills and residue effectively.",
