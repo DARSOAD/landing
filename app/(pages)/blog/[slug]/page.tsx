@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
     const article = blogData.find((item) => item.slug === params.slug);
-    if (!article) return { title: "Artículo no encontrado" };
+    if (!article) return { title: "Not found" };
 
     return {
         title: article.header,
