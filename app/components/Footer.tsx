@@ -51,7 +51,7 @@ const Footer = () => {
             {/* Botón Flotante de Llamada */}
             <a
                 href="tel:+611300082727"
-                className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg animate-bounce transition-transform transform hover:scale-110"
+                className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg animate-bounce transition-transform transform hover:scale-110 z-20"
                 style={{
                     animation: "moveLeftRight 0.25s infinite alternate ease-in-out"
                 }}
