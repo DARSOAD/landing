@@ -93,7 +93,7 @@ function Portfolio({ data }: ServiceProps) {
                                             <p className="text-gray-800 font-sans font-extralight lg:hidden">
                                                 {isMobile
                                                     ? service.description.length > 150
-                                                        ? service.description.substring(0, 150) + "..."
+                                                        ? service.description.substring(0, 600) + "..."
                                                         : service.description
                                                     : service.description}
                                             </p>
