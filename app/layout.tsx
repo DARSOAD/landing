@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
+import GoogleScripts from "./components/GoogleScripts"; // Importamos el componente cliente
 
-// Cargar la fuente DM Sans
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "700"], // Pesos opcionales
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Commercial cleaning sydney",
+  title: "Commercial Cleaning Sydney",
   description: "Sydney’s best commercial cleaning, we’ll beat any price!",
 };
 
@@ -21,32 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Tag Manager */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16885861325"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-16885861325');
-      `,
-          }}
-        />
-
-        {/* Favicon */}
+      <Head>
+        {/* Meta etiquetas optimizadas */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
+      </Head>
 
-      <body className={`${dmSans.variable} antialiased`}>
+      <body className={`${dmSans.variable} antialiased bg-gray-50`}>
+        <GoogleScripts /> {/* Aquí ejecutamos los scripts como un componente cliente */}
         {children}
       </body>
     </html>

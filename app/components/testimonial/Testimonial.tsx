@@ -17,6 +17,7 @@ interface TestimonialData {
 interface TestimonialItemProps {
     data: TestimonialData;
     type: string;
+    className?: string; // ✅ Añadir esta línea
 }
 
 const TestimonialItem = ({ data, type }: TestimonialItemProps) => {

@@ -2,6 +2,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { trackConversion } from "@/utils/tracking"; // Ajusta la ruta según tu estructura
 
 interface ServiceItemData {
     title: string;
@@ -14,12 +15,6 @@ interface ServiceProps {
     data: ServiceItemData[];
 }
 
-// Agregar una definición para evitar errores de TypeScript
-declare global {
-    interface Window {
-        gtag?: (...args: unknown[]) => void;
-    }
-}
 
 
 export default function Formhead({ data }: ServiceProps) {
@@ -71,17 +66,11 @@ export default function Formhead({ data }: ServiceProps) {
             if (result.success) {
                 // Resetea el formulario
                 setFormData({ companyName: "", mobile: "", service: "" });
-
-                // 🔥 Registra la conversión en Google Ads
-                if (typeof window !== "undefined" && window.gtag) {
-                    window.gtag("event", "conversion", {
-                        send_to: "AW-16885861325/kCGVCK36laYaEM2X5_M-",
-                    });
-                }
+                trackConversion("google");
+                trackConversion("linkedin");
             }
         } catch (error) {
-            setErrorMessage("Error sending the email.");
-            console.log(error);
+            setErrorMessage("Error sending the email."+error);
         }
 
         setLoading(false);

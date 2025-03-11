@@ -6,19 +6,21 @@ interface ServiceItemData {
     location: string;
     header: string;
     date: string;
-    description: string;
+    description: string;    
     slug: string;
+    translated?: boolean;
 }
 
 interface ServiceProps {
     data: ServiceItemData;
     type: string;
+    translate?: boolean; // ✅ Añadir esta línea
 }
 
 const ServiceItem = ({ data }: ServiceProps) => {
     return (
         <>
-            <div className="max-w-md bg-white rounded-2xl overflow-hidden lg:w-full 2xl:w-[45vh]">
+            <div className="max-w-md bg-white rounded-2xl overflow-hidden lg:w-full 2xl:w-full">
                 {/* Imagen */}
                 <div className="w-full h-48 relative lg:h-60">
 

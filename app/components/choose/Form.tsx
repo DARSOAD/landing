@@ -2,6 +2,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { trackConversion } from "@/utils/tracking"; // Ajusta la ruta según tu estructura
 
 interface ServiceItemData {
     title: string;
@@ -12,12 +13,6 @@ interface ServiceItemData {
 
 interface ServiceProps {
     data: ServiceItemData[];
-}
-
-declare global {
-    interface Window {
-        gtag?: (...args: unknown[]) => void;
-    }
 }
 
 export default function Form({ data }: ServiceProps) {
@@ -68,21 +63,16 @@ export default function Form({ data }: ServiceProps) {
             alert(result.message);
 
             if (result.success) {
-                // 🔥 Registra la conversión en Google Ads
-                if (typeof window !== "undefined" && window.gtag) {
-                    window.gtag("event", "conversion", {
-                        send_to: "AW-16885861325/kCGVCK36laYaEM2X5_M-",
-                    });
-                }
 
                 // Resetea el formulario
                 setFormData({ companyName: "", mobile: "", service: "Hotel cleaning service" });
+                trackConversion("google");
+                trackConversion("linkedin");
             } else {
                 setErrorMessage("Error en el envío. Intenta de nuevo.");
             }
-        } catch (error) {
-            console.error("Error in the request:", error);
-            setErrorMessage("Error sending the email.");
+        } catch (error) {        
+            setErrorMessage("Error sending the email."+error);
         }
 
         setLoading(false);

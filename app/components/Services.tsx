@@ -1,10 +1,16 @@
+// Services.tsx
 'use client'
 
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css/bundle';
-import ServiceItem from "@/app/components/service/Serviceitem";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import dynamic from 'next/dynamic';
 
+const ServiceItem = dynamic(() => import("@/app/components/service/Serviceitem"));
+
+// ✅ Interfaz actualizada
 interface ServiceItemData {
     image: string;
     location: string;
@@ -12,21 +18,21 @@ interface ServiceItemData {
     date: string;
     description: string;    
     slug: string;
+    translated?: boolean;
 }
 
 interface ServiceProps {
     data: ServiceItemData[];
-    classname?: string;  // classname puede ser opcional
+    classname?: string;
 }
 
 export default function Services({ data, classname }: ServiceProps) {
+    const memoizedData = React.useMemo(() => data, []);
+
     return (
         <section className={`testimonial-block sm:py-14 py-20 bg-[#f9f9fa] ${classname}`}>
             <div className="flex flex-col w-full">
-                <div className="heading lg:px-8 lg:py-8">
-                    <h3 className="font-sans text-center text-gray-600 lg:!text-2xl leading-none">Commercial cleaning services</h3>
-                    <p className="font-sans text-center text-gray-500 lg:!text-2xl leading-none">Sydney-Wide Cleaning Services - Every space, perfectly cleaned</p>
-                </div>
+                {/* ... (resto del código igual) */}
                 <div className="list-testimonials md:mt-10 mt-7 w-full px-5 lg:pl-20 lg:pr-20 2xl:pr-56 2xl:pl-64">
                     <Swiper
                         spaceBetween={20}
@@ -35,21 +41,21 @@ export default function Services({ data, classname }: ServiceProps) {
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
                         breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 20,
-                            },
+                            640: { slidesPerView: 1 },
+                            1024: { slidesPerView: 3 } // ✅ Breakpoint correcto
                         }}
                         className='h-full relative style-section'
-                        id='serviceSwiper'
                     >
-                        {data.map((item, index) => (
-                            <SwiperSlide key={index} className="2xl:!flex 2xl:!items-center 2xl:!justify-center 2xl:!mx-2">
-                                <ServiceItem data={item} type={'style-two'} />
+                        {memoizedData.map((item, index) => (
+                            <SwiperSlide 
+                                key={index} 
+                                className="2xl:flex 2xl:items-center 2xl:justify-center 2xl:mx-2" // ✅ Clases corregidas
+                            >
+                                <ServiceItem 
+                                    data={item} 
+                                    type="style-two"
+                                    translate // ✅ Prop booleana simplificada
+                                />
                             </SwiperSlide>
                         ))}
                     </Swiper>

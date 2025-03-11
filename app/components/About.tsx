@@ -40,11 +40,11 @@ const About = ({ data }: ServiceProps) => {
     >
         {/* Columna Izquierda - Texto y Características */}
         <div className="px-6 w-full lg:w-[60%] text-left space-y-6 ">
-            <h2 className="text-2xl lg:text-3xl font-sans font-extralight lg:absolute lg:top-40 lg:left-[11%] lg:z-10 leading-tight text-white 2xl:text-4xl 2xl:left-[9%]">
+            <h2 className="text-2xl lg:text-3xl font-sans font-extralight lg:absolute lg:top-40 lg:left-[11%] lg:z-10 leading-tight text-white 2xl:text-4xl 2xl:left-[7%]">
                 Sydney’s best commercial cleaning, we’ll beat any price!
             </h2>
             <Features />
-            <div className="hidden lg:block absolute bottom-8">
+            <div className="hidden md:block absolute bottom-8">
                 <ReviewsImages />
             </div>
         </div>
@@ -55,7 +55,7 @@ const About = ({ data }: ServiceProps) => {
         </div>
     
         {/* Imágenes de Reseñas en Móviles */}
-        <div className="lg:hidden">
+        <div className="md:hidden">
             <ReviewsImages />
         </div>
     </section>

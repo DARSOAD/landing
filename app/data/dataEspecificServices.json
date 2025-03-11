@@ -119,8 +119,7 @@
             "Banks, government buildings & conference venues": "Banks, government buildings & conference venues",
             "High-rise building window cleaning": "High-rise building window cleaning"
         }
-    },
-    
+    },    
     {
         "title": "Bar Cleaning",
         "description": "A clean bar keeps customers coming back. We remove spills, sanitize surfaces, and deep-clean restrooms, ensuring a fresh, hygienic space that meets health standards and enhances the nightlife experience.",
@@ -130,6 +129,18 @@
             "Sanitizing glassware, counters & seating areas": "Ensures a hygienic environment.",
             "Bathroom hygiene & odor control": "Keeps restrooms fresh and sanitized.",
             "Grease & residue removal from kitchen areas": "Maintains cleanliness in food prep spaces."
+        }
+    },
+    {
+        "title": "Construction Cleaning",
+        "description": "A clean site ensures safety and efficiency. We remove debris, dust, and residues, sanitize surfaces, and deep-clean every area, leaving your property spotless and move-in ready.",
+        "image": "/services/service14.webp",
+        "includes": {
+            "Removing post-construction dust & debris": "Clears drywall dust, sawdust, and waste for a clean finish.",
+            "Sanitizing floors, walls & surfaces": "Eliminates dirt and bacteria, ensuring a safe space.",
+            "Bathroom deep cleaning & odor control": "Keeps restrooms fresh, sanitized, and guest-ready.",
+            "Paint, adhesive & residue removal": "Leaves windows, floors, and surfaces spotless.",
+            "Final detailing for a move-in-ready space": "Thorough cleaning for a polished, professional look."
         }
     }
 ]

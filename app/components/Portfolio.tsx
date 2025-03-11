@@ -70,10 +70,6 @@ function Portfolio({ data }: ServiceProps) {
         };
     }, []);
     
-    useEffect(() => {
-        console.log("Data received:", data);
-    }, [data]);
-    
     return (
         
         <section className="work-card section-padding pb-0 bg-[#f9f9fa] lg:w-[90%] lg:ml-[5%] 2xl:ml-[5%]">

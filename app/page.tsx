@@ -1,39 +1,41 @@
-
-
-import About from "./components/About";
+import React from "react";
+import Head from "next/head";
 import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 import Promo from "./components/Promo";
-import Video from "./components/Video";
-import TestimoniialTwo from "./components/TestimonialTwo";
-import testimonialData from "./data/dataTestimonial.json"
-import companiesData from "./data/dataCompanies.json"
-import servicesData from "./data/dataServices.json"
-import servicesEspecificData from "./data/dataEspecificServices.json"
-import Companies from "./components/Companies";
-import Services from "./components/Services";
-import Choose from "./components/Choose";
 import Footer from "./components/Footer";
+import Companies from "./components/Companies";
+import ClientContent from "./components/ClientContent"; // Nuevo componente cliente
+import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData } from "./types";
 
-// const products = initialData.products;
-// const productsTop = initialData.productsTop;
+// Importar JSONs directamente con tipado
+import testimonialData from "./data/dataTestimonial.json";
+import servicesData from "./data/dataServices.json";
+import servicesEspecificData from "./data/dataEspecificServices.json";
+import companiesData from "./data/dataCompanies.json";
 
 export default function Home() {
   return (
     <>
-      <Header/>
-      <About data={servicesEspecificData}/>
-      <Promo/>
-      <Portfolio data={servicesEspecificData}/>
-      <Video/>
-      <TestimoniialTwo data={testimonialData}/>
-      <Companies data={companiesData}/>
-      <Services data={servicesData}/>
-      <Choose data={servicesEspecificData}/>
-      <Footer/>
-      
+      <Head>
+        <title>Landing Page Optimizada 🚀</title>
+        <meta name="description" content="Landing Page rápida y optimizada con Next.js y Tailwind CSS." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <Header />
+      <main className="space-y-20">
+        <About data={servicesEspecificData} />
+        <Promo />
+        <Companies data={companiesData} /> {/* Se envía un array vacío porque ya no se usa companiesData */}
+        {/* Componentes pesados cargados en ClientContent */}
+        <ClientContent
+          testimonialData={testimonialData as TestimonialItemData[]} 
+          servicesData={servicesData as ServiceItemData[]}
+          servicesEspecificData={servicesEspecificData as ServiceEspecificItemData[]}
+        />
+      </main>
+      <Footer />
     </>
   );
 }
-
-
