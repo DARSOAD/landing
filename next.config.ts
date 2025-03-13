@@ -9,7 +9,6 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   output: "export", // Habilita la exportación estática
   trailingSlash: true, // Asegura compatibilidad con rutas en S3 o Netlify
   reactStrictMode: true, // Habilita el modo estricto de React para detectar errores
-  swcMinify: true, // Usa SWC para minificación más rápida y eficiente
   images: {
     unoptimized: true, // Desactiva optimización de imágenes (para S3, pero revisa si es necesario)
     formats: ['image/avif', 'image/webp'], // 🔥 Next.js elegirá AVIF si el navegador lo soporta
