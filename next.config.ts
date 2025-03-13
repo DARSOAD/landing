@@ -6,7 +6,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 import type { Configuration } from "webpack";
 
 const nextConfig: NextConfig = withBundleAnalyzer({
-  output: "export", // Habilita la exportación estática
+  // output: "export", // Habilita la exportación estática
+  output: "standalone",
   trailingSlash: true, // Asegura compatibilidad con rutas en S3 o Netlify
   reactStrictMode: true, // Habilita el modo estricto de React para detectar errores
   images: {
