@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      <main className="space-y-20">
+      <main>
         <About data={servicesEspecificData} />
         <Promo />
         <Companies data={companiesData} /> {/* Se envía un array vacío porque ya no se usa companiesData */}

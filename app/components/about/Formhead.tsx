@@ -70,16 +70,20 @@ export default function Formhead({ data }: ServiceProps) {
                 trackConversion("linkedin");
             }
         } catch (error) {
-            setErrorMessage("Error sending the email."+error);
+            setErrorMessage("Error sending the email." + error);
         }
 
         setLoading(false);
     };
 
     return (
-        <div className="flex items-center justify-center pt-6">
-            <div className="relative bg-gray-200 bg-opacity-10 backdrop-blur-md px-8 pt-24 lg:pt-32 pb-8 lg:pb-20 rounded-3xl shadow-lg max-w-md w-full 2xl:pt-40 2xl:pb-32">
+        <div className="flex items-center justify-center pt-4">
+            <div className="relative bg-gray-200 bg-opacity-10 backdrop-blur-md px-8 pt-10 lg:pt-32 pb-8 lg:pb-20 rounded-3xl shadow-lg max-w-md w-full 2xl:pt-40 2xl:pb-32">
                 <form onSubmit={handleSubmit} className="space-y-4" id="formhead">
+
+                    <p className="font-sans text-xs text-center font-extralight lg:font-thin lg:text-sm leading-[1.1] 2xl:text-xl text-white">
+                    Get top-quality service today and receive $300 in credit COD ADSGOOGLE
+                    </p>
                     {/* Campo: Company Name */}
                     <input
                         type="text"
