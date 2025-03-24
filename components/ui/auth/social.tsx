@@ -11,30 +11,30 @@ const providers = [
   {
     id: "google",
     name: "Google",
-    bg: "bg-[#EA4335]",
-    icon: "/images/gp.svg",
+    bg: "bg-[#de3199]",
+    icon: "/svg/ins.svg",
     enabled: true,
   },
   {
     id: "twitter",
     name: "Twitter",
-    bg: "bg-[#1DA1F2]",
-    icon: "/images/tw.svg",
-    enabled: false, // Cambia a true si ya lo tienes configurado en NextAuth
+    bg: "bg-[#1c9ceb]",
+    icon: "/svg/tw.svg",
+    enabled: true, // Cambia a true si ya lo tienes configurado en NextAuth
   },
   {
     id: "facebook",
     name: "Facebook",
-    bg: "bg-[#1877F2]",
-    icon: "/images/fb.svg",
-    enabled: false,
+    bg: "bg-[#395599]",
+    icon: "/svg/fb.svg",
+    enabled: true,
   },
   {
     id: "linkedin",
     name: "LinkedIn",
-    bg: "bg-[#0077B5]",
-    icon: "/images/in.svg",
-    enabled: false,
+    bg: "bg-[#0a63bc]",
+    icon: "/svg/ln.svg",
+    enabled: true,
   },
 ];
 
