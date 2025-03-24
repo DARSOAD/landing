@@ -2,7 +2,7 @@
 
 // components/ui/auth/register-form.tsx
 'use client';
-
+import Social from '../auth/social';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -93,12 +93,10 @@ export default function RegisterForm() {
         <hr className="flex-grow border-gray-600" />
       </div>
 
-      <div className="flex justify-center gap-4">
-        <SocialButton icon="🐦" />
-        <SocialButton icon="📘" />
-        <SocialButton icon="🔗" />
-        <SocialButton icon="🟥" />
-      </div>
+      <Social locale="en" context="register" />
+      {/*context="register": (opcional) Le indica al componente si lo estás usando
+       en el formulario de registro, por si en un 
+      futuro quieres que haga algo diferente que en el login. */}
 
       <p className="mt-6 text-center text-sm text-gray-400">
         Already have an account?{' '}
