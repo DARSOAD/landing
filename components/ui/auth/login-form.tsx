@@ -1,5 +1,7 @@
 'use client';
-import Social from '../auth/social';
+
+
+import Social from '../../ui/auth/social';
 import { useState } from 'react';
 
 export default function LoginForm() {
@@ -57,12 +59,6 @@ export default function LoginForm() {
       <p className="text-sm text-gray-400 mt-4">
         Don’t have an account? <a href="/register" className="text-blue-400 hover:underline">Register</a>
       </p>
-
-       {/* Sección de login social */}
-       <div className="mt-6">
-        <p className="text-center mb-2 text-sm text-gray-400">Or continue with</p>
-        <Social locale="en"  />
-      </div>
     </form>
   );
 }

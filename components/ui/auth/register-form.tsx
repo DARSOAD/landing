@@ -1,5 +1,4 @@
-// Estructura del formulario de creacion de cuenta 
-
+// Estructura del formulario recuperacion de cuentas
 // components/ui/auth/register-form.tsx
 'use client';
 import Social from '../auth/social';
