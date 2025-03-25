@@ -23,3 +23,12 @@ export interface ServiceEspecificItemData {
     image: string;
     includes: Record<string, string | undefined>;
 }
+
+export interface PortFolioStyles { 
+    buttonText: string;
+    buttonColor: string;
+}
+
+export interface VideoSource { 
+    url: string;
+}

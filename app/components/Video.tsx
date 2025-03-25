@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 
-export default function Video() {
+export default function Video({ url }: { url: string }) {
     useEffect(() => {
         const video = document.getElementById("bg-video") as HTMLVideoElement;
 
@@ -34,8 +34,8 @@ export default function Video() {
                 muted
                 playsInline
             >
-                <source src="/videocleaning.webm" type="video/webm" />
-                Tu navegador no soporta la etiqueta de video.
+                <source src={url} type="video/webm" />
+                Your browser does not support the video tag
             </video>
 
             {/* Experience */}

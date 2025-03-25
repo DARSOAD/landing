@@ -50,7 +50,7 @@ focus:ring-[#888f90]
 
 .button-normal{
   @apply
-  text-left px-3 py-2 rounded-full text-white text-xs font-extralight transition flex items-center justify-center font-sans leading-[1.1]
+  text-left px-3 py-2 rounded-full text-white text-lg font-extralight transition flex items-center justify-center font-sans leading-[1.1]
   2xl:py-4
 }
 

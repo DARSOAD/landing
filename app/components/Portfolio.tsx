@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image"; // ✅ Importamos Image de Next.js
 import "../../css/styles.css";
-import { IoMdCheckmark } from "react-icons/io";
+import { FaCheck } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 
 interface ServiceItemData {
@@ -14,11 +14,21 @@ interface ServiceItemData {
     includes: Record<string, string | undefined>;
 }
 
-interface ServiceProps {
-    data: ServiceItemData[];
+export interface PortFolioStyles { 
+    buttonText: string;
+    buttonColor: string;
 }
 
-function Portfolio({ data }: ServiceProps) {
+interface ServiceProps {
+    data: ServiceItemData[];
+    estilos: PortFolioStyles
+}
+
+function Portfolio({ data, estilos }: ServiceProps) {
+    const {
+        buttonText,
+        buttonColor
+    } = estilos;
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -97,23 +107,23 @@ function Portfolio({ data }: ServiceProps) {
                                     </div>
                                 </div>
 
-                                <div className="lg:w-2/5 hidden lg:flex lg:flex-col py-20 pr-10">
-                                    <h4 className="text-xl text-gray-800 font-sans font-light 2xl:text-2xl">
+                                <div className="lg:w-2/5 hidden lg:flex lg:flex-col py-8 pr-10">
+                                    <h4 className="text-xl text-gray-600 font-sans 2xl:text-2xl font-medium">
                                         {service.title}
                                     </h4>
                                     <p
-                                        className="text-gray-600 font-sans font-extralight leading-none pt-4 text-sm 2xl:text-sm"
+                                        className="text-gray-600 font-sans font-medium leading-none pt-4 text-lg 2xl:text-2xl"
                                         dangerouslySetInnerHTML={{ __html: service.description }}
                                     ></p>
                                     <ul className="pt-4">
                                         {Object.entries(service.includes || {}).map(
                                             (text, index) => (
                                                 <li key={index} className="flex items-start space-x-2">
-                                                    <span className="bg-green-500 text-sm text-white ">
+                                                    <span className="text-lg text-[#556e7b] font-medium ">
                                                         {" "}
-                                                        <IoMdCheckmark />{" "}
+                                                        <FaCheck />{" "}
                                                     </span>
-                                                    <p className="text-xs font-sans font-extralight leading-[1] text-gray-600 2xl:text-sm">
+                                                    <p className="text-xs font-sans font-medium leading-[1] text-gray-600 2xl:text-2xl">
                                                         {text}
                                                     </p>
                                                 </li>
@@ -124,7 +134,8 @@ function Portfolio({ data }: ServiceProps) {
                                     {/* Botón de envío */}
                                     <button
                                         type="submit"
-                                        className="button-normal w-3/4 ml-[25%] bg-[#36a8b2] hover:bg-blue-600 mt-28"
+                                        className="button-normal w-3/4 ml-[25%] hover:bg-blue-600 mt-16"
+                                        style={{ backgroundColor: buttonColor }}
                                         onClick={() => {
                                             const section = document.getElementById('about');
                                             if (section) {
@@ -132,7 +143,7 @@ function Portfolio({ data }: ServiceProps) {
                                             }
                                         }}
                                     >
-                                        Lock in the best price for your business
+                                        {buttonText}
                                         <IoIosArrowForward className="pl-2 w-5 h-5" />
                                     </button>
 

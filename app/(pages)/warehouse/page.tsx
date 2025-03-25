@@ -4,16 +4,18 @@ import Header from "../../components/Header";
 import About from "../../components/About";
 import PromoWareHouse from "../../components/PromoWareHouse";
 import Footer from "../../components/Footer";
+import ChooseWarehouse from "../../components/ChooseWarehouse";
 import Companies from "../../components/Companies";
 import ClientContent from "../../components/ClientContent"; // Nuevo componente cliente
-import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData } from "../../types";
+import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles } from "../../types";
 
 // Importar JSONs directamente con tipado
 import testimonialData from "../../data/dataTestimonial.json";
 import servicesData from "../../data/dataServices.json";
-import servicesEspecificData from "../../data/dataEspecificServices.json";
+import servicesEspecificData from "../../data/dataEspecificServicesWarehouse.json";
 import companiesData from "../../data/dataCompanies.json";
 import aboutSectionData from "../../data/aboutContentHome.json";
+import portFolioStyles from "../../data/portFolioStyles.json";
 
 export default function Home() {
   return (
@@ -33,7 +35,10 @@ export default function Home() {
           testimonialData={testimonialData as TestimonialItemData[]}
           servicesData={servicesData as ServiceItemData[]}
           servicesEspecificData={servicesEspecificData as ServiceEspecificItemData[]}
+          portFolioStyles={portFolioStyles[1] as PortFolioStyles}
+          videoSource={"/videoIndustrial.webm" as string}
         />
+        <ChooseWarehouse data={servicesEspecificData} />
       </main>
       <Footer />
     </>

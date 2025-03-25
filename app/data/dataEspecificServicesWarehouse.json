@@ -1,0 +1,13 @@
+[
+    {
+        "title": "Industrial Cleaning",
+        "description": "Heavy-duty degreasing for machinery zones is one of our specialties. We tackle built-up grease, oil residue, and stubborn contaminants using industrial-grade products engineered for safety, performance, and compliance with workplace standards. Our trained teams know how to clean around sensitive equipment without interrupting operations — ensuring your floors, platforms, and mechanical areas stay clean, safe, and fully functional.",
+        "image": "/services/industrial.webp",
+        "includes": {
+            "Floor degreasing": "Floor degreasing",
+            "Machine base cleaning": "Machine base cleaning",
+            "Spill removal & oil control": "Spill removal & oil control",
+            "Compliance-ready sanitation": "Compliance-ready sanitation"
+        }
+    }
+]

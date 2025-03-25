@@ -39,7 +39,7 @@ const Companies = ({ data, title }: CompaniesProps) => {
                                         breakpoints={{
                                                 320: { slidesPerView: 3, spaceBetween: 5 },
                                                 640: { slidesPerView: 3, spaceBetween: 10 },
-                                                1024: { slidesPerView: 4, spaceBetween: 1 },
+                                                1024: { slidesPerView: 5, spaceBetween: 1 },
                                         }}
                                         className="h-full relative style-section 2xl:h-[17vh]"
                                 >
