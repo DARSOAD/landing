@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Companies from "./components/Companies";
 import Choose from "./components/Choose";
 import ClientContent from "./components/ClientContent"; // Nuevo componente cliente
-import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles, VideoSource } from "./types";
+import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles} from "./types";
 
 // Importar JSONs directamente con tipado
 import testimonialData from "./data/dataTestimonial.json";

@@ -43,9 +43,9 @@ export default function Promo() {
             </div>
             {/* Texto superior */}
             <div className="absolute top-8 right-1 transform text-gray-500 font-sans w-4/5 text-xs md:text-xl md:top-28 lg:w-3/4 leading-none lg:leading-5 2xl:text-2xl 2xl:top-8 2xl:w-3/5">
-                <h3 className="font-extralight mb-0">We'll beat any competitor's price, Guaranteed!</h3>
+                <h3 className="font-extralight mb-0">We`ll beat any competitor`s price, Guaranteed!</h3>
                 <p className="font-light mt-0">Found a cheaper cleaning quote?</p>
-                <p className="font-extralight">We'll match it or beat it!</p>
+                <p className="font-extralight">We`ll match it or beat it!</p>
             </div>
             <div className=" text-gray-500 font-sans w-5/6 pt-44 pl-36 text-xs md:text-xl md:pt-64 md:pl-72 md:w-11/12 lg:w-[95%] lg:pt-52 lg:text-left lg:pl-[35%] leading-none lg:leading-5 2xl:text-2xl">
                 <p>
@@ -60,7 +60,7 @@ export default function Promo() {
                     We understand the compliance standards and physical demands of industrial spaces — and we deliver consistent results that meet them every time.
                 </p>
                 <p className="font-semibold">
-                    If it doesn't work for your operation, it doesn't work for us. We clean on your terms
+                    If it doesn`t work for your operation, it doesn`t work for us. We clean on your terms
                 </p>
             </div>
             {/* Beneficios */}

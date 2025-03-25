@@ -8,7 +8,8 @@ import TestimoniialTwo from "@/app/components/TestimonialTwo";
 import testimonialData from "@/app/data/dataTestimonial.json";
 import Choose from "@/app/components/Choose";
 import Footer from "@/app/components/Footer";
-import servicesEspecificData from "@/app/data/dataEspecificServices.json"
+import servicesEspecificData from "@/app/data/dataEspecificServices.json";
+import aboutSectionData from "@/app/data/aboutContentHome.json";
 
 const SLUG = "commercial-cleaning-horbsby";
 
@@ -20,7 +21,7 @@ export default function BlogPost() {
     return (
         <>
             <Header />
-            <About data={servicesEspecificData}/>
+            <About data={aboutSectionData[0]} services={servicesEspecificData}/>
             <Promo/>
             <div className="flex flex-col py-8 space-y-2">
                 <h1 className="text-sm font-sans text-gray-600 ml-10 lg:ml-40 bg-gray-200 w-60 text-center rounded-lg">

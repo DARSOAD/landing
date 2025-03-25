@@ -107,12 +107,12 @@ function Portfolio({ data, estilos }: ServiceProps) {
                                     </div>
                                 </div>
 
-                                <div className="lg:w-2/5 hidden lg:flex lg:flex-col py-8 pr-10">
-                                    <h4 className="text-xl text-gray-600 font-sans 2xl:text-2xl font-medium">
+                                <div className="lg:w-2/5 hidden lg:flex lg:flex-col py-14 pr-10">
+                                    <h4 className="text-xl text-gray-600 font-sans 2xl:text-xl font-medium">
                                         {service.title}
                                     </h4>
                                     <p
-                                        className="text-gray-600 font-sans font-medium leading-none pt-4 text-lg 2xl:text-2xl"
+                                        className="text-gray-600 font-sans font-medium leading-none pt-4 text-lg 2xl:text-xl"
                                         dangerouslySetInnerHTML={{ __html: service.description }}
                                     ></p>
                                     <ul className="pt-4">
@@ -123,7 +123,7 @@ function Portfolio({ data, estilos }: ServiceProps) {
                                                         {" "}
                                                         <FaCheck />{" "}
                                                     </span>
-                                                    <p className="text-xs font-sans font-medium leading-[1] text-gray-600 2xl:text-2xl">
+                                                    <p className="text-xs font-sans font-medium leading-[1] text-gray-600 2xl:text-xl">
                                                         {text}
                                                     </p>
                                                 </li>
