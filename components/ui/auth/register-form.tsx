@@ -45,7 +45,7 @@ export default function RegisterForm() {
       {/* Lado derecho: formulario */}
       <div className="w-full lg:w-1/2 flex justify-center items-center px-4">
         <div className="bg-[#0F172A] text-white w-full max-w-md p-8 rounded-md">
-          <h2 className="text-2xl font-bold text-center mb-2">Sign up</h2>
+          <h2 className="text-2xl font-bold text-center mb-2">Account creation</h2>
           <p className="text-center text-gray-400 mb-6 text-sm">
             Create an account to start using Dashcode
           </p>
@@ -114,7 +114,7 @@ export default function RegisterForm() {
             <hr className="flex-grow border-gray-600" />
           </div>
 
-          <Social locale="en" context="register" />
+          <Social locale="en"  />
 
           <p className="mt-6 text-center text-sm text-gray-400">
             ALREADY REGISTERED?{' '}
