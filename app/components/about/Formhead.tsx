@@ -11,13 +11,27 @@ interface ServiceItemData {
     includes: Record<string, string | undefined>;
 }
 
+interface FormContent {
+    firstText: string;
+    buttonText: string;
+    buttonColor: string;
+}
+
 interface ServiceProps {
     data: ServiceItemData[];
+    content: FormContent;
 }
 
 
 
-export default function Formhead({ data }: ServiceProps) {
+export default function Formhead({ data, content }: ServiceProps) {
+
+    const {
+        firstText,
+        buttonText,
+        buttonColor
+    } = content;
+
     const [loadingVisible, setLoadingVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [formData, setFormData] = useState({
@@ -82,7 +96,7 @@ export default function Formhead({ data }: ServiceProps) {
                 <form onSubmit={handleSubmit} className="space-y-4" id="formhead">
 
                     <p className="font-sans text-xs text-center font-extralight lg:font-thin lg:text-sm leading-[1.1] 2xl:text-xl text-white">
-                    Get top-quality service today and receive $300 in credit COD ADSGOOGLE
+                    {firstText}
                     </p>
                     {/* Campo: Company Name */}
                     <input
@@ -121,8 +135,10 @@ export default function Formhead({ data }: ServiceProps) {
                     {!loading && (
                         <button
                             type="submit"
-                            className="button-normal w-3/4 ml-[25%] bg-[#36a8b2] hover:bg-blue-600">
-                            {loading ? "Sending..." : "Lock in the best price for your business"}
+                            className={`button-normal w-3/4 ml-[25%]  hover:bg-blue-600`}
+                            style={{ backgroundColor: buttonColor }}
+                            >                            
+                            {loading ? "Sending..." : buttonText}
                             <IoIosArrowForward className="pl-2 w-5 h-5" />
                         </button>
                     )}
