@@ -5,6 +5,8 @@ import Social from '../auth/social';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import {register} from '../../../app/services/api'
+import { User } from 'lucide-react';
 
 export default function RegisterForm() {
   const [form, setForm] = useState({
@@ -23,11 +25,32 @@ export default function RegisterForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Validaciones y lógica de registro
-    console.log('Register form submitted', form);
-  };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      
+    
+      try {
+        const response = await register({
+          name: form.name,
+          email: form.email,
+          password: form.password,
+          role: "user",
+        });
+    
+        console.log('User registered:', response);
+        
+        // Guardar el token localmente
+        // localStorage.setItem('token', response.access_token);
+    
+        // Redirigir al dashboard o login
+        // window.location.href = '/dashboard';
+    
+      } catch (err: any) {
+        alert(err.message);
+      }
+    };
+    
 
   return (
     <div

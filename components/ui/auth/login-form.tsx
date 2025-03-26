@@ -3,24 +3,46 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Social from '../../ui/auth/social';
 import { useState } from 'react';
+import {login} from '../../../app/services/api'
+import Credentials from 'next-auth/providers/credentials';
+import axios from 'axios'
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false); // estado de "cargando"
+  const [errorMessage, setErrorMessage] = useState(''); // mensaje de error
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ email, password });
-  };
+    setLoading(true);
+    setErrorMessage('');
+  
+    try {
+      const result = await login({ email, password });
+  
+      if (result.success) {
+        console.log(Credentials);//// ///
+    
+     } else {
+       setErrorMessage('Login failed. Please check your credentials.');
+     }
+   } catch (error: any) {
+     setErrorMessage(error.message || 'Something went wrong.');
+   }
+ 
+   setLoading(false);
+ };
+  
 
   return (
     <form
       onSubmit={handleSubmit}
       className="w-full max-w-xl p-10 rounded-lg shadow-md bg-[#1A1C2D] text-white"
     >
-      <h2 className="text-2xl font-bold mb-6">Login to your account</h2>
-
+    
       {/* EMAIL */}
       <div className="mb-4">
         <label className="block mb-2 text-sm font-medium" htmlFor="email">
@@ -73,12 +95,20 @@ export default function LoginForm() {
         <a href="#" className="text-blue-400 hover:underline">Forgot Password?</a>
       </div>
 
+      {/* MENSAJE DE ERROR */}
+      {errorMessage && (
+        <div className="mb-4 text-sm text-red-500 bg-red-100 p-2 rounded">
+          {errorMessage}
+        </div>
+      )}
+
+
       {/* BOTÓN LOGIN */}
       <button
         type="submit"
-        className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold"
+        className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Login
+        {loading ? 'Logging in...' : 'Login'}
       </button>
 
       {/* LÍNEA DIVISORIA */}
@@ -91,10 +121,8 @@ export default function LoginForm() {
       {/* SOCIAL */}
       <Social locale="en" />
 
-      {/* TEXTO FINAL */}
-      <p className="text-sm text-gray-400 mt-4">
-        Don’t have an account? <a href="/register" className="text-blue-400 hover:underline">Register</a>
-      </p>
+     
+      
     </form>
   );
 }
