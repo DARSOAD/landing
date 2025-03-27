@@ -13,28 +13,28 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false); // estado de "cargando"
   const [errorMessage, setErrorMessage] = useState(''); // mensaje de error
-
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+    termsAccepted: false,
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setErrorMessage('');
-  
+   
     try {
-      const result = await login({ email, password });
+      const user = await login({
+        "email": "alexajenny@gmail.com",
+        "password": "supersecure123"
+      });
   
-      if (result.success) {
-        console.log(Credentials);//// ///
-    
-     } else {
-       setErrorMessage('Login failed. Please check your credentials.');
-     }
-   } catch (error: any) {
-     setErrorMessage(error.message || 'Something went wrong.');
-   }
- 
-   setLoading(false);
- };
+      console.log('Usuario logueado:', user);
+      // window.location.href = '/dashboard'; // O redirigir donde quieras
+  
+    } catch (err: any) {
+      alert(err.message);
+    }
+  };
   
 
   return (
