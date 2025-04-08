@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trackConversion } from "@/utils/tracking"; // Ajusta la ruta según tu estructura
-import { sendEmail } from "@/app/services/api"; // Importa la función para enviar el correo
+import { sendEmail } from "@/services/api"; // Importa la función para enviar el correo
 
 interface ServiceItemData {
     title: string;

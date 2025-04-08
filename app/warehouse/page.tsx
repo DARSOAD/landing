@@ -1,21 +1,21 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/Header";
-import About from "../../components/About";
-import PromoWareHouse from "../../components/PromoWareHouse";
-import Footer from "../../components/Footer";
-import ChooseWarehouse from "../../components/ChooseWarehouse";
-import Companies from "../../components/Companies";
-import ClientContent from "../../components/ClientContent"; // Nuevo componente cliente
-import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles } from "../../types";
+import Header from "../components/Header";
+import About from "../components/About";
+import PromoWareHouse from "../components/PromoWareHouse";
+import Footer from "../components/Footer";
+import ChooseWarehouse from "../components/ChooseWarehouse";
+import Companies from "../components/Companies";
+import ClientContent from "../components/ClientContent"; // Nuevo componente cliente
+import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles } from "../types";
 
 // Importar JSONs directamente con tipado
-import testimonialData from "../../data/dataTestimonial.json";
-import servicesData from "../../data/dataServices.json";
-import servicesEspecificData from "../../data/dataEspecificServicesWarehouse.json";
-import companiesData from "../../data/dataCompanies.json";
-import aboutSectionData from "../../data/aboutContentHome.json";
-import portFolioStyles from "../../data/portFolioStyles.json";
+import testimonialData from "../data/dataTestimonial.json";
+import servicesData from "../data/dataServices.json";
+import servicesEspecificData from "../data/dataEspecificServicesWarehouse.json";
+import companiesData from "../data/dataCompanies.json";
+import aboutSectionData from "../data/aboutContentHome.json";
+import portFolioStyles from "../data/portFolioStyles.json";
 
 export default function Home() {
   return (
