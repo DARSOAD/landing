@@ -21,7 +21,7 @@ const Features = ({ data }: FeaturesDrops) => {
     return (
         <div className="text-white mt-2 mx-2 px-2 lg:block lg:!mt-20 lg:py-1 2xl:ml-8 2xl:!mt-32">
             {/* Texto superior */}
-            <p className="mt-4 font-sans text-xs text-left font-extralight lg:font-thin lg:text-sm leading-[1.1] lg:mt-0 2xl:text-xl">
+            <p className="mt-4 font-sans text-sm text-left font-extralight lg:font-thin lg:text-sm leading-[1.1] lg:mt-0 2xl:text-xl">
                 {featuresFirstText}
             </p>
 
@@ -41,7 +41,7 @@ const Features = ({ data }: FeaturesDrops) => {
             </div>
 
             {/* Texto inferior */}
-            <p className="font-sans text-xs text-left font-extralight lg:font-thin lg:text-sm leading-[1.1] 2xl:text-xl">
+            <p className="font-sans text-sm text-left font-extralight lg:font-thin lg:text-sm leading-[1.1] 2xl:text-xl">
                 {featuresSecondText}
             </p>
         </div>
