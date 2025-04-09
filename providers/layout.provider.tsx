@@ -1,5 +1,5 @@
 'use client'
-import { useConfig } from '@/hooks/use-config'
+import { useConfig } from '@/src/hooks/use-config'
 import React from 'react'
 import { cn } from "@/lib/utils"
 
