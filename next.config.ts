@@ -1,27 +1,23 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+import type { Configuration } from 'webpack';
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-
-import type { Configuration } from "webpack";
-
-const nextConfig: NextConfig = withBundleAnalyzer({
-  // output: "export", // Habilita la exportación estática
-  output: "standalone",
-  trailingSlash: true, // Asegura compatibilidad con rutas en S3 o Netlify
+// Tu configuración actual
+const nextConfig: NextConfig = {
+  // Configuración estándar de Next.js
+  output: 'standalone', // Usar exportación independiente
+  trailingSlash: true,  // Asegura compatibilidad con rutas en S3 o Netlify
   reactStrictMode: true, // Habilita el modo estricto de React para detectar errores
   images: {
     unoptimized: true, // Desactiva optimización de imágenes (para S3, pero revisa si es necesario)
-    formats: ['image/avif', 'image/webp'], // 🔥 Next.js elegirá AVIF si el navegador lo soporta
-    minimumCacheTTL: 60, // 🔥 Cachea imágenes por 60s mínimo en el servidor
+    formats: ['image/avif', 'image/webp'], // Next.js elige AVIF si el navegador lo soporta
+    minimumCacheTTL: 60, // Cachea imágenes por 60s mínimo en el servidor
   },
   experimental: {
-    scrollRestoration: true, // Mejora la experiencia de usuario evitando recargas innecesarias
-    outputFileTracingIncludes: {
-      "/*": ["node_modules/some-large-lib/**"], // Evita incluir paquetes innecesarios
-    },
+    scrollRestoration: true, // Mejora la experiencia evitando recargas innecesarias
+  },
+  outputFileTracingIncludes: {
+    "/*": ["node_modules/some-large-lib/**"], // Evita incluir paquetes innecesarios
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production", // Elimina `console.log` en producción
@@ -34,11 +30,12 @@ const nextConfig: NextConfig = withBundleAnalyzer({
 
     return config;
   },
-  // Agrega la configuración de i18n
-  i18n: {
-    locales: ['en', 'es'], // Agrega los idiomas que estás usando
-    defaultLocale: 'en', // Idioma por defecto
-  },
-});
 
-export default nextConfig;
+  // Cualquier otra configuración específica que tengas en tu archivo original...
+};
+
+// Crear el plugin next-intl
+const withNextIntl = createNextIntlPlugin();
+
+// Combinar ambas configuraciones (tu configuración de Next.js y next-intl)
+export default withNextIntl(nextConfig);

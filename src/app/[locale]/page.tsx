@@ -7,15 +7,15 @@ import Footer from "@/src/components/Footer";
 import Companies from "@/src/components/Companies";
 import Choose from "@/src/components/Choose";
 import ClientContent from "@/src/components/ClientContent"; // Nuevo componente cliente
-import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles} from "./types";
+import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles} from "../types";
 
 // Importar JSONs directamente con tipado
-import testimonialData from "./data/dataTestimonial.json";
-import servicesData from "./data/dataServices.json";
-import servicesEspecificData from "./data/dataEspecificServices.json";
-import companiesData from "./data/dataCompanies.json";
-import aboutSectionData from "./data/aboutContentHome.json";
-import portFolioStyles from "./data/portFolioStyles.json";
+import testimonialData from "../data/dataTestimonial.json";
+import servicesData from "../data/dataServices.json";
+import servicesEspecificData from "../data/dataEspecificServices.json";
+import companiesData from "../data/dataCompanies.json";
+import aboutSectionData from "../data/aboutContentHome.json";
+import portFolioStyles from "../data/portFolioStyles.json";
 
 export default function Home() {
   return (
