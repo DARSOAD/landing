@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useForm, useFieldArray, SubmitHandler } from "react-hook-form";
-import { Input } from "@/components/ui/input";
-import { Icon } from "@/components/ui/icon";
-import { Label } from "@/components/ui/label";
+import { Input } from "@/src/components/ui/input";
+import { Icon } from "@/src/components/ui/icon";
+import { Label } from "@/src/components/ui/label";
 import { Link } from '@/src/i18n/routing';
 
 interface FormValues {

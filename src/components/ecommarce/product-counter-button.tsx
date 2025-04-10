@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Icon } from "@/components/ui/icon"
+import { Icon } from "@/src/components/ui/icon"
 import { cn } from "@/lib/utils"
 
 const ProductCounterButton = ({ className }: { className?: string }) => {

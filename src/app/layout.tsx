@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import "./globals.css";
+import "@/src/app"; // Importamos los estilos globales
 import Head from "next/head";
 import GoogleScripts from "@/src/components/GoogleScripts"; // Importamos el componente cliente
 

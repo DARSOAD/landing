@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import blogData from "@/src/app/data/dataServices.json";
-import Header from "@/src/app/components/Header";
-import About from "@/src/app/components/About";
-import Promo from "@/src/app/components/Promo";
-import TestimoniialTwo from "@/src/app/components/TestimonialTwo";
+import Header from "@/src/components/Header";
+import About from "@/src/components/About";
+import Promo from "@/src/components/Promo";
+import TestimoniialTwo from "@/src/components/TestimonialTwo";
 import testimonialData from "@/src/app/data/dataTestimonial.json";
-import Choose from "@/src/app/components/Choose";
-import Footer from "@/src/app/components/Footer";
 import servicesEspecificData from "@/src/app/data/dataEspecificServices.json"
+import Choose from "@/src/components/Choose";
+import Footer from "@/src/components/Footer";
 import aboutSectionData from "@/src/app/data/aboutContentHome.json";
 const SLUG = "commercial-cleaning-chatswood";
 

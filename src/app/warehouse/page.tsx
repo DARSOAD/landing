@@ -1,12 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../components/Header";
-import About from "../components/About";
-import PromoWareHouse from "../components/PromoWareHouse";
-import Footer from "../components/Footer";
-import ChooseWarehouse from "../components/ChooseWarehouse";
-import Companies from "../components/Companies";
-import ClientContent from "../components/ClientContent"; // Nuevo componente cliente
+import Header from "@/src/components/Header";
+import About from "@/src/components/About";
+import PromoWareHouse from "@/src/components/PromoWareHouse";
+import Footer from "@/src/components/Footer";
+import ChooseWarehouse from "@/src/components/ChooseWarehouse";
+import Companies from "@/src/components/Companies";
+import ClientContent from "@/src/components/ClientContent"; // Nuevo componente cliente
 import { TestimonialItemData, ServiceItemData, ServiceEspecificItemData, PortFolioStyles } from "../types";
 
 // Importar JSONs directamente con tipado
