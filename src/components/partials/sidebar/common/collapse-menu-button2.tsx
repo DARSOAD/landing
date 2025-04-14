@@ -1,18 +1,18 @@
 "use client";
 import React from 'react'
-import { Link, usePathname } from "@/components/navigation";
+import { Link, usePathname } from "@/src/components/navigation";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger
-} from "@/components/ui/collapsible";
+} from "@/src/components/ui/collapsible";
 
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { SubChildren } from '@/lib/menus';
 
 interface CollapseMenuButtonProps {

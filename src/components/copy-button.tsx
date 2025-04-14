@@ -5,13 +5,13 @@ import { CheckIcon, ClipboardIcon } from "lucide-react"
 
 import { Event, trackEvent } from "@/lib/events"
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "@/components/ui/button"
+import { Button, ButtonProps } from "@/src/components/ui/button"
 import {
     TooltipProvider,
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "@/src/components/ui/tooltip"
 
 export function CopyButton({
     event,

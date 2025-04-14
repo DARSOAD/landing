@@ -9,7 +9,7 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
+} from "@/src/components/ui/select"
 import Image from 'next/image';
 
 export default function LocalSwitcher() {

@@ -1,6 +1,6 @@
 'use client'
 import { FC, MouseEventHandler } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { Maximize } from "lucide-react";
 
 type CustomDocument = Document & {

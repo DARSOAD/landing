@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { usePathname } from "@/components/navigation";
+import { usePathname } from "@/src/components/navigation";
 import { getMenuList, type Group, type Menu, type Submenu } from "@/lib/menus";
 
 import IconNav from './icon-nav';

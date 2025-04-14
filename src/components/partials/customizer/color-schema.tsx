@@ -4,8 +4,8 @@ import * as React from "react";
 import { useTheme } from "next-themes";
 import { hexToRGB } from "@/lib/utils";
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
-import { Icon } from "@/components/ui/icon"
+import { Label } from "@/src/components/ui/label";
+import { Icon } from "@/src/components/ui/icon"
 
 import { Check } from "lucide-react";
 

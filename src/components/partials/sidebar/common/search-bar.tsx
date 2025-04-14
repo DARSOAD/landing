@@ -1,19 +1,19 @@
 'use client'
-import { Input } from '@/components/ui/input'
+import { Input } from '@/src/components/ui/input'
 import { useConfig } from '@/src/hooks/use-config'
 import React from 'react'
 import {
     InputGroup,
     InputGroupText,
-} from "@/components/ui/input-group";
+} from "@/src/components/ui/input-group";
 import { Search } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
-} from "@/components/ui/hover-card"
+} from "@/src/components/ui/hover-card"
 import { useMenuHoverConfig } from '@/src/hooks/use-menu-hover';
 const SearchBar = () => {
     const [config] = useConfig()

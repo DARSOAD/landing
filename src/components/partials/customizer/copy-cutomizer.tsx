@@ -1,6 +1,6 @@
 'use client'
 
-import { CopyButton } from "@/components/copy-button"
+import { CopyButton } from "@/src/components/copy-button"
 import { useConfig } from "@/src/hooks/use-config"
 
 const CopyCustomizer = () => {

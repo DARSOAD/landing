@@ -1,19 +1,20 @@
+// src/components/partials/auth/login-form.tsx
 "use client";
 import React from 'react'
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/src/components/ui/button";
+import { Checkbox } from "@/src/components/ui/checkbox";
+import { Input } from "@/src/components/ui/input";
+import { Label } from "@/src/components/ui/label";
 import { Link } from '@/src/i18n/routing';
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from "zod";
 import { cn } from "@/lib/utils"
 import { Loader2 } from 'lucide-react';
-import { loginUser } from '@/action/auth-action';
+import { loginUser } from '@/src/services/authService';
 import { toast } from "sonner"
-import { useRouter } from '@/components/navigation';
+import { useRouter } from '@/src/components/navigation';
 
 const schema = z.object({
   email: z.string().email({ message: "Your email is invalid." }),
@@ -40,8 +41,8 @@ const LoginForm = () => {
     resolver: zodResolver(schema),
     mode: "all",
     defaultValues: {
-      email: "dashcode@codeshaper.net",
-      password: "password",
+      email: "diegoanrora.rodriguez@gmail.com",
+      password: "2pacjmtjhtalI@312",
     },
   });
 
@@ -59,8 +60,12 @@ const LoginForm = () => {
           router.push('/dashboard/analytics');
           toast.success("Successfully logged in");
         }
-      } catch (err: any) {
-        toast.error(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          toast.error(err.message);
+        } else {
+          toast.error("An unexpected error occurred.");
+        }
       }
     });
   };
@@ -134,7 +139,7 @@ const LoginForm = () => {
           Forgot Password?
         </Link>
       </div>
-      <Button fullWidth disabled={isPending}>
+      <Button className="w-full" disabled={isPending}>
         {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
         {isPending ? "Loading..." : "Sign In"}
       </Button>

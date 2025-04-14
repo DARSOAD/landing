@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
 import { Group } from "@/lib/menus";
 import { useParams, usePathname } from "next/navigation";
-import { Link } from "@/components/navigation";
+import { Link } from "@/src/components/navigation";
 import { useConfig } from "@/src/hooks/use-config";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import MenuLabel from "../common/menu-label";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { CollapseMenuButton2 } from "../common/collapse-menu-button2";
 import TeamSwitcher from "../common/team-switcher";
 import SearchBar from "../common/search-bar";

@@ -1,5 +1,5 @@
 'use client'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/src/components/ui/button'
 import { useConfig } from '@/src/hooks/use-config'
 import Image from 'next/image'
 import React from 'react'

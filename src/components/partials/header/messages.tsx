@@ -1,17 +1,17 @@
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/src/components/ui/badge";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ScrollArea } from "@/components/ui/scroll-area";
+} from "@/src/components/ui/dropdown-menu";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
 import { Link } from '@/src/i18n/routing';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/src/components/ui/avatar";
 import { messages, type Message } from "./data";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 
 const Messages = () => {
     return (

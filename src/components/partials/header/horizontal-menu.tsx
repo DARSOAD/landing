@@ -1,11 +1,11 @@
 'use client'
 import React from "react";
 import { ChevronDown } from "lucide-react";
-import { Link, usePathname } from "@/components/navigation";
+import { Link, usePathname } from "@/src/components/navigation";
 import { useConfig } from '@/src/hooks/use-config'
 import { useTranslations } from 'next-intl';
 import { getHorizontalMenuList } from "@/lib/menus";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import {
   Menubar,
   MenubarContent,
@@ -15,7 +15,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/components/ui/menubar"
+} from "@/src/components/ui/menubar"
 import { useMediaQuery } from "@/src/hooks/use-media-query";
 
 export default function HorizontalMenu() {

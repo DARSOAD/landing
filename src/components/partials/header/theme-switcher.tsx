@@ -2,17 +2,17 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/src/components/ui/dropdown-menu";
 import { Moon, Sun } from "lucide-react"
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Icon } from "@/components/ui/icon"
+import { Icon } from "@/src/components/ui/icon"
 
 const ThemeButton = () => {
     const { theme, setTheme } = useTheme();

@@ -1,7 +1,7 @@
 "use client";
 import React, { CSSProperties } from "react";
-import { Button } from "@/components/ui/button";
-import { Icon } from "@/components/ui/icon";
+import { Button } from "@/src/components/ui/button";
+import { Icon } from "@/src/components/ui/icon";
 import { Link } from "@/src/i18n/routing";
 import { cn } from "@/lib/utils";
 import { GripVertical } from "lucide-react";

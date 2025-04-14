@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog";
 import {
     Command,
     CommandEmpty,
@@ -8,9 +8,9 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/ui/command";
+} from "@/src/components/ui/command";
 import { Link } from '@/src/i18n/routing';
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { useConfig } from "@/src/hooks/use-config";
 const HeaderSearch = () => {
     const [config] = useConfig();

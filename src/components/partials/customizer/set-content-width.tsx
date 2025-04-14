@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/src/components/ui/label";
 import { useConfig } from "@/src/hooks/use-config";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { wideContentWidthSvg, boxedContentWidthSvg } from "./data";
 import { contentType } from "@/lib/type";
 

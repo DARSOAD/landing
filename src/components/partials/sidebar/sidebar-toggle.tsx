@@ -1,11 +1,8 @@
 'use client'
-import { ChevronLeft } from "lucide-react";
-
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { useConfig } from "@/src/hooks/use-config";
 import { useMediaQuery } from "@/src/hooks/use-media-query";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { motion } from 'framer-motion';
 
 

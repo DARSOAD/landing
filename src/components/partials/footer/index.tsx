@@ -1,8 +1,8 @@
 import React from 'react'
 import FooterContent from './footer-content'
-import { Link } from "@/components/navigation"
+import { Link } from "@/src/components/navigation"
 // import Image from 'next/image'
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 // import { auth } from '@/lib/auth'
 
 const DashCodeFooter = async () => {

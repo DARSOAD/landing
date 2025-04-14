@@ -1,7 +1,7 @@
 "use client";
 import { useConfig } from "@/src/hooks/use-config";
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/src/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/src/components/ui/radio-group"
 import { navBarType } from "@/lib/type";
 const HeaderStyle = () => {
 

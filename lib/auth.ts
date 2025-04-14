@@ -1,48 +1,30 @@
-import NextAuth from "next-auth";
+import { cookies } from "next/headers";
+import { jwtDecode } from "jwt-decode";
 
-import CredentialsProvider from "next-auth/providers/credentials";
-import { getUserByEmail} from "./data";
+export async function auth() {
+  try {
+    const token = (await cookies()).get("accessToken")?.value; // ✅ con await
+    if (!token) return null;
 
+    interface JwtPayload {
+      name: string;
+      email: string;
+      image?: string;
+      exp: number;
+    }
 
+    const payload: JwtPayload = jwtDecode<JwtPayload>(token); // puedes tipar esto si lo deseas
 
-export const { auth, handlers, signIn, signOut } = NextAuth({
+    if (payload.exp * 1000 < Date.now()) return null;
 
-  session: {
-    strategy: "jwt",
-  },
-  providers: [
-     CredentialsProvider({
-            credentials: {
-              
-                email: {},
-                password: {},
-            },
-            async authorize(credentials) {
-                if (credentials === null) return null;
-                
-                try {
-                    const user = getUserByEmail(credentials?.email as string);
-                    if (user) {
-                        const isMatch = user?.password === credentials?.password;
-
-                        if (isMatch) {
-                            return {
-                                id: user.email, // Use email as id or replace with a unique identifier
-                                name: user.name,
-                                email: user.email,
-                                image: user.image,
-                            };
-                        } else {
-                            throw new Error("Email or Password is not correct");
-                        }
-                    } else {
-                        throw new Error("User not found");
-                    }
-                } catch (error) {
-                    throw new Error(error as string);
-                }
-            },
-        }),
-   
-  ],
-});
+    return {
+      user: {
+        name: payload.name,
+        email: payload.email,
+        image: payload.image || "/images/default-avatar.png"
+      }
+    };
+  } catch {
+    return null;
+  }
+}

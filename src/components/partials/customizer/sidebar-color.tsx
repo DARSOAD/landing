@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/src/components/ui/label";
 import { useConfig } from "@/src/hooks/use-config";
-import { Icon } from "@/components/ui/icon";
+import { Icon } from "@/src/components/ui/icon";
 import { Check } from "lucide-react";
 import { defaultSidebarColorSvg, colorSidebarColorSvg } from "./data";
 import {
@@ -11,7 +11,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/src/components/ui/tooltip";
 const SidebarColor = () => {
   const [config, setConfig] = useConfig();
   const [show, setShow] = React.useState<boolean>(

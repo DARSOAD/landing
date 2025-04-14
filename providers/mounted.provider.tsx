@@ -1,5 +1,5 @@
 "use client"
-import Loader from '@/components/loader'
+import Loader from '@/src/components/loader'
 
 import { useMounted } from '@/src/hooks/use-mounted'
 import React from 'react'

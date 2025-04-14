@@ -1,8 +1,8 @@
 
 'use client'
 import React from 'react'
-import DateRangePicker from '@/components/date-range-picker'
-import { usePathname } from '@/components/navigation'
+import DateRangePicker from '@/src/components/date-range-picker'
+import { usePathname } from '@/src/components/navigation'
 import { cn } from "@/lib/utils"
 
 const PageTitle = ({ title, className }: { title?: string, className?: string }) => {

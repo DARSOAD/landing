@@ -1,24 +1,24 @@
 "use client";
 import React, { CSSProperties } from 'react'
-import { Link, usePathname } from "@/components/navigation";
+import { Link, usePathname } from "@/src/components/navigation";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { GripVertical } from 'lucide-react';
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { Button } from "@/src/components/ui/button";
+import { ScrollArea } from "@/src/components/ui/scroll-area"
 
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger
-} from "@/components/ui/collapsible";
+} from "@/src/components/ui/collapsible";
 import {
     Tooltip,
     TooltipTrigger,
     // TooltipContent,
     TooltipProvider
-} from "@/components/ui/tooltip";
+} from "@/src/components/ui/tooltip";
 import {
     DropdownMenu,
     DropdownMenuItem,
@@ -31,8 +31,8 @@ import {
     DropdownMenuSubTrigger,
     DropdownMenuPortal,
     DropdownMenuSubContent
-} from "@/components/ui/dropdown-menu";
-import { Icon } from "@/components/ui/icon";
+} from "@/src/components/ui/dropdown-menu";
+import { Icon } from "@/src/components/ui/icon";
 import { Submenu } from "@/lib/menus"
 
 // for dnd 

@@ -9,8 +9,8 @@ import {
     Avatar,
     // AvatarFallback,
     AvatarImage,
-} from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
+} from "@/src/components/ui/avatar"
+import { Button } from "@/src/components/ui/button"
 import {
     Command,
     CommandEmpty,
@@ -19,7 +19,7 @@ import {
     CommandItem,
     CommandList,
     CommandSeparator,
-} from "@/components/ui/command"
+} from "@/src/components/ui/command"
 import {
     Dialog,
     // DialogContent,
@@ -28,21 +28,21 @@ import {
     // DialogHeader,
     // DialogTitle,
     DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/src/components/ui/dialog"
 // import { Input } from "@/components/ui/input"
 // import { Label } from "@/components/ui/label"
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/src/components/ui/popover"
 import {
     // Select,
     // SelectContent,
     // SelectItem,
     // SelectTrigger,
     // SelectValue,
-} from "@/components/ui/select"
+} from "@/src/components/ui/select"
 import { useConfig } from "@/src/hooks/use-config";
 // import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion } from "framer-motion";

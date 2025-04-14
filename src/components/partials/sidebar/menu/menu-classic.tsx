@@ -2,27 +2,27 @@
 
 import React from 'react'
 import { Ellipsis } from "lucide-react";
-import { usePathname } from "@/components/navigation";
+import { usePathname } from "@/src/components/navigation";
 import { cn } from "@/lib/utils";
 import { getMenuList } from "@/lib/menus";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
 import {
     Tooltip,
     TooltipTrigger,
     TooltipProvider
-} from "@/components/ui/tooltip";
+} from "@/src/components/ui/tooltip";
 import { useConfig } from "@/src/hooks/use-config";
 import MenuLabel from "../common/menu-label";
 import MenuItem from "../common/menu-item";
 import { CollapseMenuButton } from "../common/collapse-menu-button";
 import MenuWidget from "../common/menu-widget";
-import SearchBar from '@/components/partials/sidebar/common/search-bar'
+import SearchBar from '@/src/components/partials/sidebar/common/search-bar'
 import TeamSwitcher from '../common/team-switcher'
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation'
 import { getLangDir } from 'rtl-detect';
-import Logo from '@/components/logo';
-import SidebarHoverToggle from '@/components/partials/sidebar/sidebar-hover-toggle';
+import Logo from '@/src/components/logo';
+import SidebarHoverToggle from '@/src/components/partials/sidebar/sidebar-hover-toggle';
 import { useMenuHoverConfig } from '@/src/hooks/use-menu-hover';
 import { useMediaQuery } from '@/src/hooks/use-media-query';
 

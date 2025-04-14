@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/src/components/ui/checkbox"
 import { useConfig } from '@/src/hooks/use-config'
 
 const TeamSwitcherToggle = () => {

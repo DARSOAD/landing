@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import DashCodeLogo from "@/components/dascode-logo";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
+import DashCodeLogo from "@/src/components/dascode-logo";
 import { Group } from "@/lib/menus";
-import { Button } from "@/components/ui/button";
-import { Icon } from "@/components/ui/icon";
+import { Button } from "@/src/components/ui/button";
+import { Icon } from "@/src/components/ui/icon";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/src/components/ui/tooltip";
 import { Link } from "@/src/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/src/hooks/use-config";

@@ -1,16 +1,16 @@
 "use client";
 import React from 'react'
-import { Link, usePathname } from "@/components/navigation";
+import { Link, usePathname } from "@/src/components/navigation";
 import { useState } from "react";
 import { ChevronDown} from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger
-} from "@/components/ui/collapsible";
+} from "@/src/components/ui/collapsible";
 
 import { SubChildren } from '@/lib/menus';
 import { useMobileMenuConfig } from '@/src/hooks/use-mobile-menu';
@@ -48,7 +48,6 @@ export function MultiCollapseMenuButton({
                         color='secondary'
                         variant="ghost"
                         className="w-full justify-start h-auto hover:bg-transparent hover:ring-offset-0 capitalize text-sm font-normal   md:px-5 px-5 "
-                        fullWidth
                     >
                         <div className="w-full items-center flex justify-between">
                             <div className="flex items-center">

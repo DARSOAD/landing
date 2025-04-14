@@ -1,15 +1,15 @@
 'use client'
 import { Link } from '@/src/i18n/routing';
-import { Icon } from "@/components/ui/icon";
-import { Button } from "@/components/ui/button";
+import { Icon } from "@/src/components/ui/icon";
+import { Button } from "@/src/components/ui/button";
 import {
     Sheet,
     SheetHeader,
     SheetContent,
     SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/src/components/ui/sheet";
 import { MenuClassic } from "./menu-classic";
-import DashCodeLogo from "@/components/dascode-logo";
+import DashCodeLogo from "@/src/components/dascode-logo";
 import { useMobileMenuConfig } from "@/src/hooks/use-mobile-menu";
 import { useMediaQuery } from "@/src/hooks/use-media-query";
 import { useConfig } from "@/src/hooks/use-config";

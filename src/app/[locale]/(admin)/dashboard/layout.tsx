@@ -1,27 +1,14 @@
-// app/dashboard/layout.tsx
-"use client";
+import PageTitle from "@/src/components/page-title";
+import { Metadata } from "next";
 
-import { ReactNode } from "react";
-import { usePathname } from "next/navigation";
-import DashCodeSidebar from "@/src/components/partials/sidebar";
-// import DashCodeHeader from "@/components/partials/header";
+export const metadata: Metadata = {
+  title: "Dashcode Next Js",
+  description: "Dashcode is a popular dashboard template.",
+};
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  return <>
+    <PageTitle className="mb-6" />
+    {children}</>;
+};
 
-export default function Layout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  const getTitle = () => {
-    const parts = pathname.split("/");
-    return parts[2]?.charAt(0).toUpperCase() + parts[2]?.slice(1) || "Dashboard";
-  };
-
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow-md p-4 text-xl font-bold">
-        {getTitle()}
-      </header>
-      <main className="p-6">
-        <DashCodeSidebar />
-        {children}
-      </main>
-    </div>
-  );
-}
+export default Layout;

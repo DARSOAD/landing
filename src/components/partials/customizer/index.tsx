@@ -7,10 +7,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Icon } from "@/components/ui/icon";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from "@/src/components/ui/sheet";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
+import { Icon } from "@/src/components/ui/icon";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
 import ColorSchema from "./color-schema";
 import SetSkin from "./set-skin";
 import MenuHidden from "./menu-hidden";

@@ -1,7 +1,7 @@
 'use client'
 import { useTheme } from 'next-themes';
 import React from 'react'
-import { Button } from '@/components/ui/button';
+import { Button } from '@/src/components/ui/button';
 import Link from 'next/link';
 import { useMediaQuery } from '@/src/hooks/use-media-query';
 

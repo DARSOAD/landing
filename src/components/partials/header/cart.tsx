@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/src/components/ui/button"
 import {
     Sheet,
     SheetContent,
@@ -7,12 +7,12 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
-import { Icon } from "@/components/ui/icon";
-import { Badge } from "@/components/ui/badge";
+} from "@/src/components/ui/sheet"
+import { Icon } from "@/src/components/ui/icon";
+import { Badge } from "@/src/components/ui/badge";
 import Image from "next/image";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import ProductCounterButton from "@/components/ecommarce/product-counter-button";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
+import ProductCounterButton from "@/src/components/ecommarce/product-counter-button";
 
 export function Cart() {
     const cartProducts = [

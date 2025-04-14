@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Link } from '@/components/navigation'
-import DashCodeLogo from "@/components/dascode-logo"
+import { Link } from '@/src/components/navigation'
+import DashCodeLogo from "@/src/components/dascode-logo"
 import { useConfig } from '@/src/hooks/use-config'
 import { useMediaQuery } from '@/src/hooks/use-media-query'
 
