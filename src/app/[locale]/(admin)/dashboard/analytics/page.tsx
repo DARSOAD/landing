@@ -26,14 +26,7 @@ const DashboardPage = () => {
                 </p>
               </div>
               <BlockBadge className="end-3">{t("widget_badge")}</BlockBadge>
-              <Image
-                src="/images/all-img/widget-bg-1.png"
-                width={400}
-                height={150}
-                priority
-                alt="Description of the image"
-                className="absolute top-0 start-0 w-full h-full object-cover rounded-md"
-              />
+             
             </WelcomeBlock>
           </div>
           <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
