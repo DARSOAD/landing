@@ -118,7 +118,7 @@ export function MenuDragAble() {
                 })}>
 
                     <TeamSwitcher />
-                    <SearchBar />
+                    {/* <SearchBar /> */}
                 </div>
 
 

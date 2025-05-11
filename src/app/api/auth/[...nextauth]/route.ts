@@ -1,7 +1,8 @@
-//src/app/api/auth/[...nextauth]/route.ts
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import { jwtDecode } from "jwt-decode";
 
+// 👉 Declaraciones personalizadas para TypeScript
 declare module "next-auth" {
   interface User {
     accessToken: string;
@@ -24,10 +25,32 @@ declare module "next-auth" {
     image?: string;
     role?: string;
     sub?: string;
+    email?: string;
   }
 }
 
-const handler = NextAuth({
+// 👉 Función que refresca el accessToken usando FastAPI
+async function refreshAccessToken(refreshToken: string) {
+  const res = await fetch(`${process.env.BACKEND_URL}/users/refresh`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ refresh_token: refreshToken }),
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to refresh token");
+  }
+
+  const data = await res.json();
+
+  return {
+    accessToken: data.access_token,
+    refreshToken: data.refresh_token,
+  };
+}
+
+// 👇 Opciones de configuración
+export const authOptions: AuthOptions = {
   providers: [
     Credentials({
       name: "Credentials",
@@ -51,10 +74,8 @@ const handler = NextAuth({
           throw new Error(data.message || "Login failed");
         }
 
-       
-          
         return {
-          id: data.user.id, // 👈 Aquí puedes usar el ID del usuario si lo necesitas
+          id: data.user.id,
           image: data.user.picture,
           email: data.user.email,
           name: data.user.name,
@@ -67,14 +88,41 @@ const handler = NextAuth({
 
   callbacks: {
     async jwt({ token, user }) {
+      // Al hacer login
       if (user) {
-        token.accessToken = user.accessToken;
-        token.refreshToken = user.refreshToken;
-        token.name = user.name;
-        token.image = user.image;
-        token.sub = user.id;
-        token.email = user.email;
+        return {
+          ...token,
+          accessToken: user.accessToken,
+          refreshToken: user.refreshToken,
+          name: user.name,
+          image: user.image,
+          sub: user.id,
+          email: user.email,
+        };
       }
+
+      // Revisar si el token expiró
+      if (typeof token.accessToken === "string") {
+        const decoded = jwtDecode<{ exp: number }>(token.accessToken);
+        const isExpired = Date.now() >= decoded.exp * 1000;
+
+        if (!isExpired) return token;
+
+        console.log("🔁 Token expirado. Refrescando...");
+
+        try {
+          const refreshed = await refreshAccessToken(token.refreshToken as string);
+          return {
+            ...token,
+            accessToken: refreshed.accessToken,
+            refreshToken: refreshed.refreshToken,
+          };
+        } catch (err) {
+          console.error("❌ Error al refrescar token:", err);
+          return { ...token, accessToken: "", refreshToken: "" }; // invalidar sesión
+        }
+      }
+
       return token;
     },
 
@@ -83,7 +131,6 @@ const handler = NextAuth({
       session.user.name = token.name!;
       session.user.image = typeof token.image === "string" ? token.image : undefined;
       session.user.email = token.email!;
-
       return session;
     },
   },
@@ -93,6 +140,7 @@ const handler = NextAuth({
   },
 
   secret: process.env.NEXTAUTH_SECRET,
-});
+};
 
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

@@ -41,8 +41,8 @@ const LoginForm = () => {
     resolver: zodResolver(schema),
     mode: "all",
     defaultValues: {
-      email: "diegoanrora.rodriguez@gmail.com",
-      password: "2pacjmtjhtalI@312",
+      email: "diegoanrora.rodriguez@hotmail.com",
+      password: "1234567890",
     },
   });
 

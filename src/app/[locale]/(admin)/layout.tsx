@@ -40,7 +40,7 @@ export default async function RootLayout({
           <DirectionProvider direction={direction}>
             <LayoutProvider >
               <ThemeCustomize />
-              {/* <DashCodeHeader /> */}
+              <DashCodeHeader />
               <DashCodeSidebar />
               <LayoutContentProvider>
                 {children}

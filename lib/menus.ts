@@ -51,33 +51,33 @@ export function getMenuList(pathname: string, t: any): Group[] {
               icon: "heroicons:arrow-trending-up",
               children: [],
             },
-            {
-              href: "/dashboard/blog",
-              label: t("blog"),
-              active: pathname === "/dashboard/blog",
-              icon: "heroicons-outline:chat",
-              children: [],
-            },
           ],
         },
         
       ],
     },
     {
-      groupLabel: t("apps"),
-      id: "apps",
+      groupLabel: t("blog"),
+      id: "blog",
       menus: [
         {
-          id: "chat",
-          href: "/app/chat",
-          label: t("chat"),
+          id: "blog",
+          href: "/dashboard/blog",
+          label: t("blog"),
           active: pathname.includes("/app/chat"),
           icon: "heroicons-outline:chat",
           submenus: [
             {
-              href: "/app/chat",
-              label: t("chat"),
-              active: pathname === "/app/chat",
+              href: "/dashboard/blog",
+              label: t("allPosts"),
+              active: pathname === "/dashboard/blog",
+              icon: "heroicons-outline:chat",
+              children: [],
+            },
+            {
+              href: "/dashboard/create-post",
+              label: t("createPost"),
+              active: pathname === "/dashboard/create-post",
               icon: "heroicons-outline:chat",
               children: [],
             },
@@ -85,50 +85,50 @@ export function getMenuList(pathname: string, t: any): Group[] {
         },
       ],
     },
-    {
-      groupLabel: t("pages"),
-      id: "auth",
-      menus: [
-        {
-          id: "auth",
-          href: "/auth/login",
-          label: t("authentication"),
-          active: pathname.includes("/auth"),
-          icon: "heroicons-outline:lock-closed",
-          submenus: [
-            {
-              href: "/auth/login",
-              label: t("signInOne"),
-              active: pathname === "/auth/login",
-              icon: "",
-              children: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      groupLabel: t("elements"),
-      id: "components",
-      menus: [
-        {
-          id: "components",
-          href: "/components/avatar",
-          label: t("components"),
-          active: pathname.includes("/components"),
-          icon: "heroicons-outline:collection",
-          submenus: [
-            {
-              href: "/components/avatar",
-              label: t("avatar"),
-              active: pathname === "/components/avatar",
-              icon: "",
-              children: [],
-            },
-          ],
-        },
-      ],
-    },
+    // {
+    //   groupLabel: t("pages"),
+    //   id: "auth",
+    //   menus: [
+    //     {
+    //       id: "auth",
+    //       href: "/auth/login",
+    //       label: t("authentication"),
+    //       active: pathname.includes("/auth"),
+    //       icon: "heroicons-outline:lock-closed",
+    //       submenus: [
+    //         {
+    //           href: "/auth/login",
+    //           label: t("signInOne"),
+    //           active: pathname === "/auth/login",
+    //           icon: "",
+    //           children: [],
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   groupLabel: t("elements"),
+    //   id: "components",
+    //   menus: [
+    //     {
+    //       id: "components",
+    //       href: "/components/avatar",
+    //       label: t("components"),
+    //       active: pathname.includes("/components"),
+    //       icon: "heroicons-outline:collection",
+    //       submenus: [
+    //         {
+    //           href: "/components/avatar",
+    //           label: t("avatar"),
+    //           active: pathname === "/components/avatar",
+    //           icon: "",
+    //           children: [],
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
   ];
   
 }
