@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+body {
+  background-color: -#f9f9fa !important;
+}
+
+/* globals.css */
+.input-custom {
+  @apply 
+  w-full
+  px-4
+  py-3
+  rounded-full
+bg-white
+  bg-opacity-20
+text-white 
+!placeholder-white 
+  focus:outline-none 
+  focus:ring-2 
+focus:ring-blue-400
+  text-xs
+  font-sans
+  font-extralight
+  2xl:text-lg
+}
+#formhead .data-\[placeholder\]\:text-muted-foreground[data-placeholder] {
+  color: hsl(0deg 0% 100%) !important;
+}
+
+.input-custom2 {
+  @apply 
+  w-full
+  px-4
+  py-3
+  rounded-full
+bg-white
+  bg-opacity-50
+placeholder-gray-700
+text-gray-700
+  focus:outline-none 
+  focus:ring-2 
+focus:ring-[#888f90]
+  text-xs
+  2xl:text-lg
+}
+
+.button-normal{
+  @apply
+  text-left px-3 py-2 rounded-full text-white text-sm font-extralight transition flex items-center justify-center font-sans leading-[1.1]
+  2xl:py-4
+  2xl:text-lg
+}
+
+.p-experience{
+  @apply
+  border-l-2
+  border-gray-800
+  text-gray-800
+  pl-4
+  hover:text-white
+  hover:border-white
+  hover:cursor-pointer
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 84%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[#f9f9fa] text-foreground;
+  }
+}
+
+.swiper-pagination-bullet{
+  background-color: #bbbbbb !important;
+}
+
+.swiper-pagination-bullet-active{
+  width: 16px !important;
+  border-radius: 30% !important;
+}
+
+.list-testimonials .swiper {
+  padding-bottom: 40px !important;
+}
+
+/* Estilos del loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid rgb(54, 159, 145);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
