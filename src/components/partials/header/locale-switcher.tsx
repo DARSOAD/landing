@@ -1,8 +1,8 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/src/i18n/routing';
-import { useTransition } from 'react';
+// import { usePathname, useRouter } from '@/src/i18n/routing';
+// import { useTransition } from 'react';
 import {
     Select,
     SelectContent,
@@ -13,16 +13,17 @@ import {
 import Image from 'next/image';
 
 export default function LocalSwitcher() {
-    const [isPending, startTransition] = useTransition();
-    const router = useRouter();
-    const pathname = usePathname();
+    // const [isPending, startTransition] = useTransition();
+    // const router = useRouter();
+    // const pathname = usePathname();
     const localActive = useLocale();
 
     const onSelectChange = (nextLocale: string) => {
-        startTransition(() => {
+        // startTransition(() => {
 
-            router.replace(pathname, { locale: nextLocale });
-        });
+        //     router.replace(pathname, { locale: nextLocale });
+        // });
+        console.log('Locale changed to:', nextLocale);
     };
     return (
         <Select onValueChange={onSelectChange} defaultValue={localActive}>

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { usePathname } from "@/src/components/navigation";
-import { getMenuList, type Group, type Menu, type Submenu } from "@/lib/menus";
+import { getMenuList} from "@/lib/menus";
 
 import IconNav from './icon-nav';
 import SidebarNav from './sideabr-nav';

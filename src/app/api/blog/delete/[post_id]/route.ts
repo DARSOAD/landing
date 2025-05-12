@@ -1,13 +1,11 @@
-// src/app/api/blog/delete/[post_id]/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 
 export async function DELETE(
   req: NextRequest,
-  context: { params: { post_id: string } }
+  { params }: { params: Record<string, string> } // <- cambio clave aquí
 ) {
-  const post_id = context.params.post_id;
+  const post_id = params.post_id;
 
   if (!post_id) {
     return NextResponse.json({ error: "ID de post no proporcionado" }, { status: 400 });

@@ -39,8 +39,7 @@ const FullScreenToggle: FC = () => {
       onClick={toggleFullScreen}
       variant="outline"
       color="secondary"
-      className="border-default-600 "
-      fullWidth
+      className="border-default-600 w-full"
     >
       Fullscreen Mode
       <Maximize className="ms-2 h-4 w-4" />

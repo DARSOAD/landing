@@ -19,7 +19,7 @@ const OverviewRadialChart = ({
 
   const {theme:mode} = useTheme();
 
-  const options:any = {
+  const options: ApexCharts.ApexOptions = {
     chart: {
       toolbar: {
         show: false,
@@ -43,7 +43,7 @@ const OverviewRadialChart = ({
             label: "Total",
             color: mode === 'light' ? colors["default-600"] : colors["default-300"],
             formatter: function () {
-              return 249;
+              return "249";
             }
           }
         }

@@ -14,7 +14,7 @@ import SearchBar from "../common/search-bar";
 import { getLangDir } from "rtl-detect";
 import { cn } from "@/lib/utils";
 const SidebarNav = ({ menuList }: { menuList: Group[] }) => {
-  const [config, setConfig] = useConfig();
+  const [config] = useConfig();
   const pathname = usePathname();
   const params = useParams<{ locale: string }>();
   const direction = getLangDir(params?.locale ?? "");
@@ -54,7 +54,7 @@ const SidebarNav = ({ menuList }: { menuList: Group[] }) => {
         </div>
         <nav className="mt-6 h-full w-full ">
           <div className=" h-full  space-y-1.5 flex flex-col  items-start  px-4 pb-8 ">
-            {data?.menus.map(({ submenus }, index) =>
+            {data?.menus.map(({ submenus }) =>
               submenus?.map(
                 ({ href, label, active, icon, children: subChildren }, i) => (
                   <React.Fragment key={`double-menu-index-${i}`}>
@@ -63,9 +63,8 @@ const SidebarNav = ({ menuList }: { menuList: Group[] }) => {
                         asChild
                         color={active ? "default" : "secondary"}
                         variant={active ? "default" : "ghost"}
-                        fullWidth
                         className={cn(
-                          "h-10 capitalize justify-start md:px-3 px-3 hover:ring-transparent hover:ring-offset-0",
+                          "w-full h-10 capitalize justify-start md:px-3 px-3 hover:ring-transparent hover:ring-offset-0",
                           {
                             "bg-secondary text-default hover:bg-secondary":
                               active && config.sidebarColor !== "light",

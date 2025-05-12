@@ -1,16 +1,13 @@
 'use client';
 import React from 'react'
-import { Link, usePathname, useRouter } from "@/components/navigation";
+import { Link, usePathname } from "@/src/components/navigation";
 import {
     Breadcrumb,
-    BreadcrumbEllipsis,
     BreadcrumbItem,
-    BreadcrumbLink,
     BreadcrumbList,
-    BreadcrumbPage,
     BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Icon } from "@/components/ui/icon"
+} from "@/src/components/ui/breadcrumb"
+import { Icon } from "@/src/components/ui/icon"
 import { ReactNode } from "react";
 
 const SiteBreadcrumb = ({ children }: { children?: ReactNode }) => {
@@ -36,8 +33,8 @@ const SiteBreadcrumb = ({ children }: { children?: ReactNode }) => {
 
                         {
                             locations.map((link, index) => {
-                                let href = `/${locations.slice(0, index + 1).join('/')}`
-                                let itemLink = link
+                                const href = `/${locations.slice(0, index + 1).join('/')}`
+                                const itemLink = link
                                 const isLast = index === locations.length - 1;
                                 return (
                                     <React.Fragment key={index}>

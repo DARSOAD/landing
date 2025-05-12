@@ -22,7 +22,7 @@ const SetSkin = () => {
     <div>
       <div className="text-sm font-medium mb-3">Skins</div>
       <div className="grid grid-cols-3 gap-3">
-        {allSkin?.map(({ key, label }, index) => (
+        {allSkin?.map(({ key, label }) => (
           <div key={key}>
             <button
               type="button"

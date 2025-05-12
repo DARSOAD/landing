@@ -23,7 +23,7 @@ export const inputVariants = cva(
           "border-destructive/50 text-destructive focus:border-destructive  disabled:bg-destructive/30 disabled:placeholder:text-destructive  placeholder:text-destructive/70",
       },
 
-      size: {
+      inputSize: {
         sm: "h-8 text-xs read-only:leading-8",
         default: "h-9 text-xs read-only:leading-none",
         md: "h-10 text-sm read-only:leading-10",
@@ -33,16 +33,16 @@ export const inputVariants = cva(
 
     defaultVariants: {
       color: "default",
-      size: "default",
+      inputSize: "default",
     },
   }
 );
 
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
   VariantProps<typeof inputVariants> {
   color?: InputColor
-  size?: any
+  inputSize?: "sm" | "default" | "md" | "lg"
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
@@ -50,7 +50,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     {
       className,
       type,
-      size,
+      inputSize,
       color,
       ...props
     },
@@ -60,7 +60,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className={cn(
-          inputVariants({ color, size }),
+          inputVariants({ color, inputSize }),
           className
         )}
         ref={ref}

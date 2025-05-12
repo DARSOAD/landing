@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ScrollArea } from "@/src/components/ui/scroll-area";
-import DashCodeLogo from "@/src/components/dascode-logo";
 import { Group } from "@/lib/menus";
 import { Button } from "@/src/components/ui/button";
 import { Icon } from "@/src/components/ui/icon";
@@ -33,16 +32,16 @@ const IconNav = ({ menuList }: IconNavProps) => {
     >
       <div className="text-center py-5">
         <Link href="/dashboard/analytics">
-          <DashCodeLogo className="  text-default-900 h-8 w-8 [&>path:nth-child(3)]:text-background [&>path:nth-child(2)]:text-background mx-auto" />
+          {/* <DashCodeLogo className="  text-default-900 h-8 w-8 [&>path:nth-child(3)]:text-background [&>path:nth-child(2)]:text-background mx-auto" /> */}
         </Link>
       </div>
       <ScrollArea className="[&>div>div[style]]:block! h-full">
         <nav className="mt-8 h-full w-full ">
           <ul className=" h-full flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-2 ">
             {menuList?.map(({ groupLabel, menus }, index) => (
-              <li key={index} className=" block w-full">
+              <li key={index} className=" block w-full" id={groupLabel}>
                 {menus?.map(
-                  ({ href, label, icon, active, id, submenus }, menuIndex) => (
+                  ({ href, label, icon, active,  submenus }, menuIndex) => (
                     <TooltipProvider disableHoverableContent key={menuIndex}>
                       <Tooltip delayDuration={100}>
                         <TooltipTrigger asChild>

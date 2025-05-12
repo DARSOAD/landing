@@ -19,7 +19,7 @@ const ThemeButton = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button size="icon" rounded="full" className=" md:bg-secondary bg-transparent  text-secondary-foreground hover:ring-0  md:h-8 md:w-8 h-auto w-auto  hover:bg-secondary hover:ring-offset-0">
+                <Button size="icon" className="rounded-full md:bg-secondary bg-transparent text-secondary-foreground hover:ring-0 md:h-8 md:w-8 h-auto w-auto hover:bg-secondary hover:ring-offset-0">
                     <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 " />
                     <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                     <span className="sr-only">Toggle theme</span>

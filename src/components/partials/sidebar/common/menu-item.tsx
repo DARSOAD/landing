@@ -60,14 +60,13 @@ const MenuItem = ({
         style={style}
         variant={active ? "default" : "ghost"}
         color={active ? "default" : "secondary"}
-        fullWidth
-                     className={cn(
-                                          "hover:ring-transparent hover:ring-offset-0 justify-start text-sm font-medium capitalize group md:hover:px-8 h-auto py-3 md:px-3 px-3",
-                                          {
-                                            "bg-secondary text-default hover:bg-secondary":
-                                              active && config.sidebarColor !== "light",
-                                          }
-                                        )}
+        className={cn(
+          "w-full hover:ring-transparent hover:ring-offset-0 justify-start text-sm font-medium capitalize group md:hover:px-8 h-auto py-3 md:px-3 px-3",
+          {
+            "bg-secondary text-default hover:bg-secondary":
+              active && config.sidebarColor !== "light",
+          }
+        )}
         asChild
         size={collapsed ? "icon" : "default"}
       >
@@ -105,10 +104,9 @@ const MenuItem = ({
     return (
       <Button
         variant={active ? "default" : "ghost"}
-        fullWidth
         color={active ? "default" : "secondary"}
         className={cn(
-          "hover:ring-transparent hover:ring-offset-0 flex-col h-auto py-1.5 px-3.5 capitalize font-semibold",
+          "w-full hover:ring-transparent hover:ring-offset-0 flex-col h-auto py-1.5 px-3.5 capitalize font-semibold",
           {
             "bg-secondary text-default hover:bg-secondary":
               active && config.sidebarColor !== "light",
@@ -130,14 +128,16 @@ const MenuItem = ({
         setMobileMenuConfig({ ...mobileMenuConfig, isOpen: false })
       }
       variant={active ? "default" : "ghost"}
-      fullWidth
+      className={cn(
+        "w-full hover:ring-transparent hover:ring-offset-0",
+        {
+          "justify-start text-sm font-medium capitalize h-auto py-3 md:px-3 px-3":
+            !collapsed || hovered,
+          "bg-secondary text-default hover:bg-secondary":
+            active && config.sidebarColor !== "light",
+        }
+      )}
       color={active ? "default" : "secondary"}
-      className={cn("hover:ring-transparent hover:ring-offset-0", {
-        "justify-start text-sm font-medium capitalize h-auto py-3 md:px-3 px-3":
-          !collapsed || hovered,
-        "bg-secondary text-default hover:bg-secondary":
-          active && config.sidebarColor !== "light",
-      })}
       asChild
       size={collapsed && !hovered ? "icon" : "default"}
     >

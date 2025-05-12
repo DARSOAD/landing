@@ -1,7 +1,8 @@
 
 import { cn } from "@/lib/utils"
+import { StaticImageData } from "next/image";
 interface WelcomeProps {
-  image?: any;
+  image?: string | StaticImageData;
   children: React.ReactNode;
   badge?: string;
   className?: string;

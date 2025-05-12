@@ -11,7 +11,6 @@ import {
 import { ScrollArea } from "@/src/components/ui/scroll-area";
 import { Icon } from "@/src/components/ui/icon";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
-import ColorSchema from "./color-schema";
 import SetSkin from "./set-skin";
 import MenuHidden from "./menu-hidden";
 import SearchBarToggle from "./search-bar-toggle";
@@ -84,7 +83,6 @@ const ThemeCustomize = ({ }) => {
               </TabsList>
               <TabsContent value="style" className="p-6 divide-y divide-default-300">
                 <div className="space-y-6 pb-6">
-                  <ColorSchema />
                   <SetSkin />
                 </div>
                 <div className="space-y-6 -mx-6 p-6">

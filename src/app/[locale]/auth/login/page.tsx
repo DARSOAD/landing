@@ -1,10 +1,9 @@
 import { Link } from '@/src/i18n/routing';
 import LoginForm from "@/src/components/partials/auth/login-form";
 import Image from "next/image";
-import Social from "@/src/components/partials/auth/social";
 import Copyright from "@/src/components/partials/auth/copyright";
 import Logo from "@/src/components/partials/auth/logo";
-const Login = ({ params: { locale } }: { params: { locale: string } }) => {
+const Login = () => {
   return (
     <>
       <div className="flex w-full items-center overflow-hidden min-h-dvh h-dvh basis-full">
@@ -52,9 +51,6 @@ const Login = ({ params: { locale } }: { params: { locale: string } }) => {
                   <div className="absolute inline-block bg-default-50 dark:bg-default-100 left-1/2 top-1/2 transform -translate-x-1/2 px-4 min-w-max text-sm text-default-500 font-normal">
                     Or continue with
                   </div>
-                </div>
-                <div className="max-w-[242px] mx-auto mt-8 w-full">
-                  <Social locale={locale} />
                 </div>
                 <div className="md:max-w-[345px] mx-auto font-normal text-default-500 mt-12 uppercase text-sm">
                   Don’t have an account?{" "}

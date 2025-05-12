@@ -76,7 +76,7 @@ const LoginForm = () => {
         <Label htmlFor="email" className=" font-medium text-default-600">
           Email{" "}
         </Label>
-        <Input size="lg"
+        <Input
           disabled={isPending}
           {...register("email")}
           type="email"
@@ -97,12 +97,12 @@ const LoginForm = () => {
           Password{" "}
         </Label>
         <div className="relative">
-          <Input size="lg"
+          <Input
             disabled={isPending}
             {...register("password")}
             type={passwordType}
             id="password"
-            className="peer  "
+            className="peer"
             placeholder=" "
           />
 

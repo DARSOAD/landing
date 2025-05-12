@@ -9,7 +9,7 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 interface RevenueBarChartProps {
   height?: number;
   chartType?: "bar" | "area";
-  series?: any[];
+  series?: { name: string; data: number[] }[];
   chartColors?: string[]
 }
 const defaultSeries = [{
@@ -35,7 +35,7 @@ const RevenueBarChart = ({
   const { isRtl } = config;
   const t = useTranslations("AnalyticsDashboard");
   const { theme: mode } = useTheme();
-  const options: any = {
+  const options: ApexCharts.ApexOptions = {
     chart: {
       toolbar: {
         show: false,
@@ -44,7 +44,7 @@ const RevenueBarChart = ({
     plotOptions: {
       bar: {
         horizontal: false,
-        endingShape: "rounded",
+        borderRadius: 10,
         columnWidth: "45%",
       },
     },
@@ -56,11 +56,9 @@ const RevenueBarChart = ({
       fontFamily: "Inter",
       offsetY: -30,
       markers: {
-        width: 8,
-        height: 8,
+        size: 8,
         offsetY: -1,
         offsetX: -5,
-        radius: 12,
       },
       labels: {
         colors: mode === "dark" ? "#CBD5E1" : "#475569",
@@ -74,7 +72,7 @@ const RevenueBarChart = ({
       text: `${t("revenue_report")}`,
       align: "left",
       offsetY: 13,
-      offsetX: isRtl ? "0%" : 0,
+      offsetX: isRtl ? 0 : 0,
       floating: false,
       style: {
         fontSize: "20px",

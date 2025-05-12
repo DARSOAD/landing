@@ -27,8 +27,8 @@ interface ServiceProps {
 }
 
 export default function Services({ data, classname }: ServiceProps) {
-    const memoizedData = React.useMemo(() => data, []);
-
+    const memoizedData = React.useMemo(() => data, [data]);
+    // ✅ Uso de useMemo para evitar re-renderizados innecesarios
     return (
         <section className={`testimonial-block sm:py-14 py-20 bg-[#f9f9fa] ${classname}`}>
             <div className="flex flex-col w-full">

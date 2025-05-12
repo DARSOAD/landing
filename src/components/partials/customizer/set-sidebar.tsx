@@ -27,7 +27,7 @@ const SetSidebar = () => {
     <div>
       <div className="text-sm font-medium mb-3">Sidebar</div>
       <div className="grid grid-cols-3 gap-3">
-        {allSidebars?.map(({ key, label, icon }, index) => (
+        {allSidebars?.map(({ key, label }) => (
           <div key={key}>
             <button
               type="button"

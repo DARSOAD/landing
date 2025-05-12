@@ -25,7 +25,7 @@ const ProgressBlock = ({
   colors = ["#0CE7FA", "#E2F6FD"] }: ProgressBlockProps) => {
   const { theme: mode } = useTheme();
 
-  const options: any = {
+  const options: ApexCharts.ApexOptions = {
     labels: labels,
     dataLabels: {
       enabled: false,

@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { colors } from "@/lib/colors";
 import { useTheme } from "next-themes";
-import { useConfig } from "@/src/hooks/use-config";
 
 interface OverviewChartProps {
   height?: number;
@@ -18,11 +17,10 @@ const OverviewChart = ({
   labels = ["A", "B", "C", "D"]
 
 }: OverviewChartProps) => {
-  const [config] = useConfig();
   const { theme: mode } = useTheme();
 
 
-  const options: any = {
+  const options: ApexCharts.ApexOptions = {
     chart: {
       toolbar: {
         show: false,
@@ -48,8 +46,8 @@ const OverviewChart = ({
             show: true,
             label: "Total",
             color: mode === 'light' ? colors["default-600"] : colors["default-300"],
-            formatter: function (w: any) {
-              return 249;
+            formatter: function () {
+              return "249";
             }
           }
         }
@@ -65,12 +63,7 @@ const OverviewChart = ({
     tooltip: {
       theme: mode === "dark" ? "dark" : "light",
     },
-    padding: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-    },
+    // Removed invalid padding property
   };
   return (
     <Chart

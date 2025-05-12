@@ -1,6 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Avatar, AvatarFallback, AvatarImage } from "@/src/components/ui/avatar";
+import { Checkbox } from "@/src/components/ui/checkbox";
 import { SquarePen, Trash2 } from "lucide-react";
 
 interface TaskItemProps {

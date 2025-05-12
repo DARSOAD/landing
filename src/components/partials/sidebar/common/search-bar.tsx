@@ -57,9 +57,7 @@ const CollapsedSearchBar = () => {
                     variant="outline"
                     color="secondary"
 
-                    fullWidth
-
-                    className="h-10 w-14 mx-auto  p-0 md:p-0  dark:border-secondary ring-offset-sidebar"
+                    className="h-10 mx-auto p-0 md:p-0 dark:border-secondary ring-offset-sidebar w-full"
                 >
                     <Search className=' h-4 w-4 dark:text-white' />
                 </Button>

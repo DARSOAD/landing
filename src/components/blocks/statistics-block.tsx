@@ -34,7 +34,7 @@ const StatisticsBlock = ({
     }
   ];
 
-  const options: any = {
+  const options: ApexCharts.ApexOptions = {
     chart: {
       toolbar: {
         autoSelected: "pan",
@@ -80,17 +80,13 @@ const StatisticsBlock = ({
       show: false,
     },
     xaxis: {
-      low: 0,
       offsetX: 0,
       offsetY: 0,
-      show: false,
       labels: {
-        low: 0,
         offsetX: 0,
         show: false,
       },
       axisBorder: {
-        low: 0,
         offsetX: 0,
         show: false,
       }

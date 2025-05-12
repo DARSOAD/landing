@@ -10,8 +10,9 @@ const SidebarBg = () => {
     "/images/all-img/img-2.jpeg",
     "/images/all-img/img-1.jpeg",
   ]);
-  const handleFileChange = (e: any) => {
-    const file = e.target.files[0];
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
     setSelectedFiles([...selectedFiles, URL.createObjectURL(file)]);
   };
 

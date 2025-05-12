@@ -16,8 +16,8 @@ const FooterStyle = () => {
       <RadioGroup
         defaultValue={footer}
         className="flex flex-wrap items-center gap-3"
-        onValueChange={(value) => {
-          setConfig({ ...config, footer: value as any });
+        onValueChange={(value: "sticky" | "default" | "hidden") => {
+          setConfig({ ...config, footer: value });
         }}
 
       >

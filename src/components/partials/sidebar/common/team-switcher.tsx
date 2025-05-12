@@ -106,7 +106,7 @@ export default function TeamSwitcher({ className }: PopoverTriggerProps) {
                             variant="outline"
                             color="secondary"
                             role="combobox"
-                            className={cn("w-full h-14 w-14 mx-auto p-0 md:p-0 dark:border-secondary ring-offset-sidebar", className)}
+                            className={cn("w-full h-14  mx-auto p-0 md:p-0 dark:border-secondary ring-offset-sidebar", className)}
                             aria-expanded={open}
                             aria-label="Select a team"
                         >
@@ -127,7 +127,7 @@ export default function TeamSwitcher({ className }: PopoverTriggerProps) {
                             role="combobox"
                             aria-expanded={open}
                             aria-label="Select a team"
-                            className={cn("w-full h-14 w-14 mx-auto p-0 md:p-0 dark:border-secondary ring-offset-sidebar", className)}
+                            className={cn("w-full h-14 mx-auto p-0 md:p-0 dark:border-secondary ring-offset-sidebar", className)}
                         >
                             <div className=" flex  gap-2 flex-1 items-center">
                                 <Avatar className=" flex-none h-[38px] w-[38px]">

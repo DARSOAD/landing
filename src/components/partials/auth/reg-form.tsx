@@ -28,7 +28,6 @@ const RegForm = () => {
           id="name"
           placeholder="John Doe"
           {...register("example")}
-          size="lg"
         />
       </div>
       <div className="space-y-2">
@@ -37,7 +36,6 @@ const RegForm = () => {
           id="email"
           placeholder="dashcode@gmail.com"
           {...register("example")}
-          size="lg"
         />
       </div>
       <div className="space-y-2">
@@ -47,7 +45,6 @@ const RegForm = () => {
           type="password"
           placeholder="dashcode"
           {...register("exampleRequired", { required: true })}
-          size="lg"
         />
       </div>
       <div className="flex justify-between">
@@ -62,7 +59,7 @@ const RegForm = () => {
         </div>
       </div>
 
-      <Button type="submit" fullWidth>
+      <Button type="submit" className="w-full">
         Create An Account
       </Button>
     </form>

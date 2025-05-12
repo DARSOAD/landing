@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/src/components/ui/button";
+import { Input } from "@/src/components/ui/input";
+import { Label } from "@/src/components/ui/label";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -14,7 +14,6 @@ const LockScreen = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   console.log(watch("example"));
@@ -31,7 +30,7 @@ const LockScreen = () => {
         />
       </div>
 
-      <Button type="submit" fullWidth>
+      <Button type="submit" className="w-full">
         Unlock
       </Button>
     </form>

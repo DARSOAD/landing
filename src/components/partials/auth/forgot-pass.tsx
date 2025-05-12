@@ -1,9 +1,8 @@
 "use client";
-import React, { useState } from "react";
 
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Label } from "@/src/components/ui/label";
+import { Input } from "@/src/components/ui/input";
+import { Button } from "@/src/components/ui/button";
 type Inputs = {
   example: string;
   exampleRequired: string;
@@ -14,7 +13,6 @@ const ForgotPass = () => {
    register,
    handleSubmit,
    watch,
-   formState: { errors },
  } = useForm<Inputs>();
  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
  console.log(watch("example"));
@@ -31,7 +29,7 @@ const ForgotPass = () => {
         />
       </div>
 
-      <Button type="submit" fullWidth>
+      <Button type="submit" className="w-full">
         Send recovery email
       </Button>
     </form>

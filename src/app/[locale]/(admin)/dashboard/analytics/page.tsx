@@ -1,10 +1,9 @@
-import Image from "next/image";
+
 import { StatisticsBlock } from "@/src/components/blocks/statistics-block";
 import { BlockBadge, WelcomeBlock } from "@/src/components/blocks/welcome-block";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import RevinueBarChart from "@/src/components/revenue-bar-chart";
 import DashboardDropdown from "@/src/components/dashboard-dropdown";
-import OverviewChart from "./components/overview-chart";
 import CompanyTable from "./components/company-table";
 import RecentActivity from "./components/recent-activity";
 import MostSales from "./components/most-sales";
@@ -72,7 +71,6 @@ const DashboardPage = () => {
                 <DashboardDropdown />
               </CardHeader>
               <CardContent>
-                <OverviewChart />
               </CardContent>
             </Card>
           </div>

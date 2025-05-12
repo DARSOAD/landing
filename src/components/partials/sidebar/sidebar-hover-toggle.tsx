@@ -6,7 +6,7 @@ import { useConfig } from "@/src/hooks/use-config";
 import { useMediaQuery } from "@/src/hooks/use-media-query";
 
 const SidebarHoverToggle = () => {
-  const [hoverConfig, setHoverConfig] = useMenuHoverConfig();
+  const [hoverConfig] = useMenuHoverConfig();
   const [config, setConfig] = useConfig();
 
   const isDesktop = useMediaQuery("(min-width: 1280px)");

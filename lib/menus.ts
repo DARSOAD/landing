@@ -10,7 +10,7 @@ export type Submenu = {
   href: string;
   label: string;
   active: boolean;
-  icon: any;
+  icon: string; // Replace with a more specific type if needed
   submenus?: Submenu[];
   children?: SubChildren[];
 };
@@ -19,7 +19,7 @@ export type Menu = {
   href: string;
   label: string;
   active: boolean;
-  icon: any;
+  icon: string;
   submenus: Submenu[];
   id: string;
 };
@@ -30,7 +30,7 @@ export type Group = {
   id: string;
 };
 
-export function getMenuList(pathname: string, t: any): Group[] {
+export function getMenuList(pathname: string, t: (key: string) => string): Group[] {
 
   return [
     {
@@ -132,7 +132,7 @@ export function getMenuList(pathname: string, t: any): Group[] {
   ];
   
 }
-export function getHorizontalMenuList(pathname: string, t: any): Group[] {
+export function getHorizontalMenuList(pathname: string, t: (key: string) => string): Group[] {
   return [
     {
       groupLabel: t("dashboard"),

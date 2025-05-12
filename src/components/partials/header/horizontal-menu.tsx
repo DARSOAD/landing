@@ -27,7 +27,6 @@ export default function HorizontalMenu() {
 
   const menuList = getHorizontalMenuList(pathname, t)
 
-  const [openDropdown, setOpenDropdown] = React.useState<boolean>(false);
 
   const isDesktop = useMediaQuery('(min-width: 1280px)')
 

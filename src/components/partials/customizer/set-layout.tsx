@@ -35,7 +35,7 @@ const SetLayout = () => {
     <div>
       <div className="text-sm font-medium mb-3">Layout</div>
       <div className=" grid grid-cols-3 gap-3">
-        {allLayouts?.map(({ key, label, icon }, index) => (
+        {allLayouts?.map(({ key, label }) => (
           <div key={key}>
             <button
               disabled={

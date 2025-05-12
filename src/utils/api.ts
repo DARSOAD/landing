@@ -12,8 +12,12 @@ export const sendEmail = async (formData: { companyName: string; mobile: string;
         }
 
         return { success: true, message: "Correo enviado con éxito!" };
-    } catch (error: any) {
-        console.error("Error en API:", error.message);
-        return { success: false, message: error.message };
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error("Error en API:", error.message);
+            return { success: false, message: error.message };
+        }
+        console.error("Error en API:", error);
+        return { success: false, message: "Error desconocido" };
     }
 };

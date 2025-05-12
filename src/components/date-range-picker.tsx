@@ -15,7 +15,13 @@ import {
 import { useTheme } from "next-themes";
 
 export default function DateRangePicker({ className }: { className?: string }) {
-    const [date, setDate] = React.useState<{ from: Date | null; to: Date | null } | null>(null);
+    // Define the CustomDateRange type
+    type CustomDateRange = {
+        from?: Date;
+        to?: Date;
+    };
+    
+    const [date, setDate] = React.useState<CustomDateRange | undefined>(undefined);
     const { theme: mode } = useTheme();
 
     return (
@@ -47,9 +53,8 @@ export default function DateRangePicker({ className }: { className?: string }) {
                     <Calendar
                         initialFocus
                         mode="range"
-                        defaultMonth={date?.from}
-                        selected={date}
-                        onSelect={setDate}
+                        defaultMonth={date?.from ?? undefined}
+                        onSelect={(value) => setDate(value as CustomDateRange | undefined)}
                         numberOfMonths={2}
                     />
                 </PopoverContent>

@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils"
 
 interface UpgradeProps {
-  image?: any;
+  image?: string; // Use string for image URL or a more specific type if needed
   children: React.ReactNode;
   className?: string;
 }

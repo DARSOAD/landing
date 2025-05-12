@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 🔁 Proxy al backend FastAPI
-    const apiRes = await fetch(`${env.API_URL}/users/login`, {
+    const apiRes = await fetch(`${env.BACKEND_URL}/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

@@ -3,7 +3,6 @@ import RegForm from "@/src/components/partials/auth/reg-form";
 import Image from "next/image";
 import Copyright from "@/src/components/partials/auth/copyright";
 import Logo from "@/src/components/partials/auth/logo";
-import Social from "@/src/components/partials/auth/social";
 const Register = () => {
   return (
     <>
@@ -53,9 +52,6 @@ const Register = () => {
                   <div className=" absolute inline-block  bg-default-50 dark:bg-default-100 left-1/2 top-1/2 transform -translate-x-1/2 px-4 min-w-max text-sm  text-default-500  font-normal ">
                     Or continue with
                   </div>
-                </div>
-                <div className="max-w-[242px] mx-auto mt-8 w-full">
-                  <Social locale={""} />
                 </div>
                 <div className="max-w-[225px] mx-auto font-normal text-default-500  2xl:mt-12 mt-6 uppercase text-sm">
                   Already registered?
